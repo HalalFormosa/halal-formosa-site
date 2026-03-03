@@ -114,6 +114,20 @@ const supporters = [
     active: true
   },
   {
+    name: "Kuliner Halal Taiwan",
+    logo: "/supporters/kuliner-halal.jpg",
+    scale: "scale-85",
+    url: "https://www.instagram.com/kulinerhalaltaiwan/",
+    active: true
+  },
+  {
+    name: "Mahkota Taiwan",
+    logo: "/supporters/nihao-indo.jpg",
+    scale: "scale-85",
+    url: "https://www.youtube.com/@nihaoindonesia8855",
+    active: false
+  },
+  {
     name: "Nihao Indo",
     logo: "/supporters/nihao-indo.jpg",
     scale: "scale-85",
