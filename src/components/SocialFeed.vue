@@ -1,12 +1,29 @@
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { t } from "@/i18n";
+
+const SCRIPT_SRC = "https://elfsightcdn.com/platform.js";
+
+onMounted(() => {
+  // Load Elfsight platform only once (SPA-safe).
+  if (!document.querySelector(`script[src="${SCRIPT_SRC}"]`)) {
+    const script = document.createElement("script");
+    script.src = SCRIPT_SRC;
+    script.async = true;
+    document.body.appendChild(script);
+  }
+});
+</script>
+
 <template>
   <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">
-        Follow Us on Social Media
+        {{ t("social.title") }}
       </h2>
 
       <p class="text-slate-600 mb-8">
-        Stay connected with Halal Formosa across our social platforms
+        {{ t("social.subtitle") }}
       </p>
 
       <!-- FOLLOW BUTTONS -->
@@ -21,7 +38,7 @@
            text-white font-semibold hover:opacity-90 transition"
         >
           <ion-icon name="logo-instagram" class="text-xl"></ion-icon>
-          Instagram
+          {{ t("common.instagram") }}
         </a>
 
         <!-- TikTok -->
@@ -34,7 +51,7 @@
            text-white font-semibold hover:opacity-90 transition"
         >
           <ion-icon name="logo-tiktok" class="text-xl"></ion-icon>
-          TikTok
+          {{ t("common.tiktok") }}
         </a>
       </div>
 
@@ -47,19 +64,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import { onMounted } from 'vue'
-
-const SCRIPT_SRC = 'https://elfsightcdn.com/platform.js'
-
-onMounted(() => {
-  // Load Elfsight platform only once (SPA-safe)
-  if (!document.querySelector(`script[src="${SCRIPT_SRC}"]`)) {
-    const script = document.createElement('script')
-    script.src = SCRIPT_SRC
-    script.async = true
-    document.body.appendChild(script)
-  }
-})
-</script>

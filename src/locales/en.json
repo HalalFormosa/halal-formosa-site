@@ -1,0 +1,601 @@
+﻿{
+  "common": {
+    "brand": "Halal Formosa",
+    "download": "Download",
+    "iosComingSoon": "iOS Coming Soon",
+    "instagram": "Instagram",
+    "tiktok": "TikTok"
+  },
+  "header": {
+    "nav": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "testimonials": "Testimonials",
+      "about": "About",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "languageLabel": "Language",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "languages": {
+      "en": "English",
+      "zh-tw": "繁體中文"
+    }
+  },
+  "hero": {
+    "titleHighlight": "Halal is Easy",
+    "titleSuffix": "in Taiwan",
+    "description": "Discover halal-friendly food, scan ingredients, explore halal maps, and travel with confidence in Taiwan.",
+    "mockupAlt": "Halal Formosa App Mockup"
+  },
+  "features": {
+    "title": "Core Features",
+    "subtitle": "Designed to make every Muslim's experience in Taiwan easier and stress-free",
+    "items": [
+      {
+        "title": "Ingredient Analysis",
+        "description": "Scan and detect questionable, suspicious, or halal-friendly ingredients instantly."
+      },
+      {
+        "title": "Product Search",
+        "description": "Discover thousands of Muslim-friendly products across Taiwan."
+      },
+      {
+        "title": "Halal Maps",
+        "description": "Explore halal restaurants, shops, and mosques anywhere in Taiwan."
+      },
+      {
+        "title": "Community Driven",
+        "description": "Powered by real users contributing halal insights every day."
+      }
+    ]
+  },
+  "supportedBy": {
+    "title": "Supported By",
+    "subtitle": "We are grateful for the support of organizations and communities who share our mission."
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose the perfect plan for your needs",
+    "periods": {
+      "week": "week",
+      "month": "month",
+      "year": "year"
+    },
+    "plans": {
+      "free": {
+        "title": "Free",
+        "subtitle": "Start exploring Taiwan",
+        "features": [
+          "Halal Map Access",
+          "Basic Ingredient Scanning",
+          "10 Scans Daily",
+          "Collections (up to 10 items total)"
+        ],
+        "disabledFeatures": [
+          "Unlimited Scans",
+          "Unlimited Collection Items",
+          "Smart For You Feed",
+          "No Ads"
+        ]
+      },
+      "proWeekly": {
+        "title": "Pro Weekly",
+        "subtitle": "Short trips & visitors"
+      },
+      "proMonthly": {
+        "title": "Pro Monthly",
+        "subtitle": "Most flexible for frequent visits"
+      },
+      "proAnnual": {
+        "title": "Pro Annual",
+        "subtitle": "Best for Muslims living in Taiwan",
+        "badge": "Best Value",
+        "saveText": "Save over 40% compared to monthly - Less than NT$2 per day"
+      },
+      "proFeatures": [
+        "Everything in Free",
+        "AI Ingredient Explanation",
+        "Smart For You Feed",
+        "No Ads",
+        "Unlimited Collection Items",
+        "Unlimited Scans",
+        "Priority Support 24/7"
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "Loved by Our Users",
+    "subtitle": "Real experiences from Muslims in Taiwan who rely on Halal Formosa every day.",
+    "paginationAriaLabel": "Go to testimonial page",
+    "items": [
+      {
+        "name": "Fitricia",
+        "role": "Indonesian Resident in Taiwan",
+        "message": "Alhamdulillah, it's now so much easier to find halal products in Taiwan, just scan and check. Sometimes we think a product is safe, but after scanning, it turns out to contain doubtful ingredients. Thank you, Halal Formosa!"
+      },
+      {
+        "name": "Rarasanti Rania",
+        "role": "PhD Student in Taiwan",
+        "message": "Alhamdulillah, thank you Halal Formosa for bringing a refreshing and much-needed solution for Muslims in Taiwan. The halal ingredient checker makes everything so convenient, and I really love the user interface, especially the product search."
+      },
+      {
+        "name": "Ogi Dani Sakarov",
+        "role": "PhD Student in Taiwan and Director of IMA Taiwan",
+        "message": "Halal Formosa is an excellent tool for Muslims in Taiwan. Its halal scan function is reliable, the halal restaurant listings are comprehensive, and prayer locations are clearly mapped."
+      },
+      {
+        "name": "dr. Herlin Ajeng Nurrahma, M.Biomed",
+        "role": "PhD Candidate in Taipei",
+        "message": "I really love this app. Halal Formosa is very helpful, especially for Muslims living as a minority in Taiwan. It makes choosing halal food easier and more reassuring when shopping or eating out."
+      }
+    ]
+  },
+  "googlePlayReviews": {
+    "title": "What Our Users Say on Google Play",
+    "subtitle": "Real reviews from Android users who rely on Halal Formosa for halal discovery, ingredient checks, and Muslim-friendly travel in Taiwan."
+  },
+  "social": {
+    "title": "Follow Us on Social Media",
+    "subtitle": "Stay connected with Halal Formosa across our social platforms"
+  },
+  "finalCta": {
+    "title": "Start Your Halal Journey Today",
+    "subtitle": "Join thousands of Muslim travelers discovering Taiwan with confidence",
+    "appStoreAlt": "App Store",
+    "googlePlayAlt": "Download on Google Play",
+    "webAlt": "Open Web App"
+  },
+  "footer": {
+    "tagline": "Taiwan's first Halal and Muslim-friendly ecosystem",
+    "product": "Product",
+    "company": "Company",
+    "connect": "Connect",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© 2025 Halal Formosa. All rights reserved.",
+    "poweredBy": "Powered by"
+  },
+  "aboutPage": {
+    "title": "About Us",
+    "intro": "Halal Formosa is Taiwan's first Muslim-friendly digital ecosystem that helps Muslims discover halal food, scan ingredients, explore halal maps, and travel across Taiwan with confidence.",
+    "brandLine": "Halal Formosa | 清真福爾摩沙",
+    "visionTitle": "Our Vision",
+    "visionText": "Our vision is to become a trusted halal information ecosystem in Taiwan, built through collaboration to empower Muslims to live and travel with confidence.",
+    "missionTitle": "Our Mission",
+    "missionParagraphs": [
+      "Our mission is to empower Muslims living in or visiting Taiwan by providing accurate, accessible, and community-driven halal information supported by responsible technology.",
+      "We achieve this by building digital tools for halal discovery, supporting transparent information sharing, and fostering constructive collaboration with Muslim organizations, halal certification bodies, Muslim-friendly travel providers, and community stakeholders.",
+      "Through responsible technology and open engagement, we aim to support the long-term growth and sustainability of the Muslim community in Taiwan."
+    ],
+    "timelineTitle": "Our Timeline",
+    "teamTitle": "Our Team",
+    "photoPlaceholder": "Photo",
+    "close": "Close",
+    "timeline": [
+      {
+        "date": "25 July 2025",
+        "description": "Halal Formosa was officially founded and the initial web application was launched to support halal discovery features."
+      },
+      {
+        "date": "2 August 2025",
+        "description": "The Halal Formosa mobile application was released on the Google Play Store. The iOS version remains under development."
+      },
+      {
+        "date": "10 December 2025",
+        "description": "The official Halal Formosa website and public landing page were launched, providing clearer platform information, onboarding, and institutional visibility."
+      },
+      {
+        "date": "27 January 2026",
+        "description": "Halal Formosa was formally introduced to the",
+        "link": {
+          "label": "Indonesian Economic and Trade Office to Taipei (KDEI Taipei)",
+          "url": "https://kdei-taipei.org/"
+        },
+        "extra": "during an official audience with Mr. Arif Sulistyo. During the meeting, both parties expressed a shared commitment to exploring collaborative efforts to support Muslim communities, particularly Indonesian Muslims living in or visiting Taiwan, through improved access to information and community-oriented initiatives."
+      },
+      {
+        "date": "27 January 2026",
+        "description": "Halal Formosa entered into a publishing and operational partnership with",
+        "link": {
+          "label": "YiQi Global Consulting (藝啟文創行銷有限公司)",
+          "url": "https://www.yiqiconsultant.com/"
+        },
+        "extra": "Under this collaboration, YiQi Global Consulting supports platform publishing, registration, and operational requirements in Taiwan, enabling formal business activities and broader institutional collaboration."
+      }
+    ],
+    "team": [
+      {
+        "name": "Rakha Ramadhana A.B.",
+        "role": "Founder",
+        "description": [
+          "Lead engineer and architect of the Halal Formosa platform",
+          "Responsible for development and maintenance of the iOS, Android, and web applications",
+          "Builds and maintains the website, landing pages, and core system infrastructure"
+        ]
+      },
+      {
+        "name": "Sherlis Oktaviani",
+        "role": "Co-Founder",
+        "description": [
+          "Leads social media actualization and digital presence",
+          "Creates and manages content such as reels, videos, and stories",
+          "Develops marketing strategies and community outreach initiatives"
+        ]
+      },
+      {
+        "name": "Paul Yang",
+        "role": "Marketing Director",
+        "description": [
+          "Leads marketing strategy, partnerships, and external relations for Halal Formosa",
+          "Responsible for resource mobilization, funding opportunities, and merchant cooperation",
+          "Engages with Taiwan government bodies and industry stakeholders to support platform growth"
+        ]
+      }
+    ]
+  },
+  "faqPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Common questions about using Halal Formosa",
+    "items": [
+      {
+        "q": "Are all products listed in Halal Formosa halal?",
+        "a": "No. Halal Formosa includes products categorized as halal, Muslim-friendly, syubhah (doubtful), and haram. Product status is determined based on available halal certifications, official statements, and ingredient analysis to help users make informed decisions."
+      },
+      {
+        "q": "Can I add halal product information?",
+        "a": "Yes. Anyone can contribute product information for items that are sold or available in Taiwan through the Halal Formosa application. This helps keep the database relevant and useful for the local Muslim community."
+      },
+      {
+        "q": "What are the requirements to add product information?",
+        "a": "Products can be submitted through the Halal Formosa platform using the plus (+) button in the Product tab. Submissions must include at least one of the following: a halal label or certification, ingredient analysis via the Halal Formosa system, or clear product photos. All submissions are reviewed and validated before publication."
+      },
+      {
+        "q": "What if someone adds unclear or even haram products?",
+        "a": "During product submission through the Halal Formosa platform, syubhah (doubtful) and haram ingredients can be identified through ingredient analysis and supporting information. Our team reviews and validates the analysis results before publishing the product information, ensuring transparency and accuracy for users."
+      },
+      {
+        "q": "How can I trust the information provided by Halal Formosa?",
+        "a": "Halal Formosa collaborates with various Muslim communities and organizations in Taiwan. Our supporters and partners are transparently listed in the Supporters or Partners section, and all submitted information is reviewed and validated before being published."
+      },
+      {
+        "q": "How can I find halal restaurants or prayer places near me?",
+        "a": "Halal Formosa provides a location-based map feature that displays nearby halal restaurants and prayer places based on your current location."
+      },
+      {
+        "q": "Can I add halal places or locations?",
+        "a": "Place submissions on Halal Formosa are currently limited to approved contributors. This helps ensure location information remains accurate, reliable, and up to date."
+      },
+      {
+        "q": "How can I become a contributor in Halal Formosa?",
+        "a": "If you are interested in becoming a contributor, please contact us at support[@]halalformosa.com with the email subject 'Becoming Halal Formosa Contributor'. Our team will review your request and follow up with the next steps."
+      },
+      {
+        "q": "What should I do if I find outdated or incorrect product or place information?",
+        "a": "If you find outdated or incorrect information about a product or place, you can use the report feature available within the Halal Formosa app to submit a report or send a ticket. Our team will review and validate the information and update it accordingly."
+      },
+      {
+        "q": "Does Halal Formosa make money from users who install the app?",
+        "a": "Yes. Halal Formosa operates using a mixed B2C and B2B business model. For users (B2C), we offer a subscription-based program called Halal Formosa Pro that provides access to advanced features. We also display in-app advertisements to help sustain platform development and ongoing services. In addition, we collaborate with business partners through B2B partnerships to support the ecosystem."
+      },
+      {
+        "q": "Where can I send feedback or complaints about Halal Formosa?",
+        "a": "You can reach our contact person through the Contact page or email us at support[@]halalformosa.com for further inquiries or feedback."
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "Have questions, feedback, or collaboration ideas? We'd love to hear from you.",
+    "successMessage": "Thank you! Your message has been sent successfully.",
+    "reachUs": "Reach Us",
+    "officeInfo": "Office Information",
+    "officeIntro": "Halal Formosa operates in collaboration with its publishing and operational partner, YiQi Global Consulting (藝啟文創行銷有限公司).",
+    "officeAddressLabel": "Office Address",
+    "officeAddressLine1": "YiQi Global Consulting Office",
+    "officeAddressLine2": "114064 臺北市內湖區洲子街12號2樓 (R.O.C.)",
+    "officeAddressLine3": "2F, No. 12, Zhouzi St., Neihu District, Taipei City 114, Taiwan",
+    "officePhoneLabel": "Office Phone",
+    "visitNote": "Visits by appointment only.",
+    "sendMessage": "Send a Message",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Send Message"
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy (\"Policy\") explains how YiQi Global Consulting (藝啟文創行銷有限公司) (\"we\", \"our\", or \"us\") handles personal and non-personal information collected through the Halal Formosa mobile application (\"Service\"), which it publishes and operates in Taiwan. By using the Service, you agree to the collection, storage, and use of information in accordance with this Policy.",
+    "effectiveDate": "Effective Date: August 2025",
+    "lastUpdated": "Last Updated: February 2026",
+    "sections": [
+      {
+        "title": "Article 1 - Definition of Personal Information",
+        "text": "\"Personal information\" refers to identifiable data such as your Google account email address, display name, and profile image collected during authentication. Other application usage information may be stored in anonymized or aggregated form."
+      },
+      {
+        "title": "Article 2 - Methods of Collecting Personal Information",
+        "list": [
+          "When you sign in using Google, we collect your email address, display name, and profile image.",
+          "We collect identifiable and anonymized activity and interaction logs associated with user accounts for monitoring, maintenance, security, analysis, and service improvement purposes.",
+          "Map usage collects approximate device location to display nearby halal-friendly locations.",
+          "Donation-related information is stored only as transaction metadata; no payment card data is stored by Halal Formosa."
+        ]
+      },
+      {
+        "title": "Article 3 - Purpose of Use",
+        "list": [
+          "To authenticate users and enable access to Service features",
+          "To provide location-based Explore and Map functionality",
+          "To monitor system performance and improve the Service",
+          "To detect, prevent, and address abuse, misuse, or security issues",
+          "To maintain transparency and records related to voluntary support contributions",
+          "To store user preferences such as language and basic application settings"
+        ]
+      },
+      {
+        "title": "Article 4 - Advertising and Ad Tracking",
+        "list": [
+          "The Service displays Google AdMob banner advertisements in the free version only.",
+          "Advertisements are used to support server maintenance and ongoing development of Halal Formosa.",
+          "Users subscribed to Halal Formosa Pro will not see advertisements.",
+          "Ads may be personalized or non-personalized depending on settings managed by Google.",
+          "Halal Formosa does not collect additional personal data specifically for advertising purposes.",
+          "Google AdMob may process device information, interaction data, and approximate location in accordance with its own policies.",
+          "<a class='text-[#d97b1a] underline' href='https://policies.google.com/technologies/ads' target='_blank'>Google Advertising Policy</a>"
+        ]
+      },
+      {
+        "title": "Article 5 - Changes to Purpose of Use",
+        "text": "Any changes to the purpose of data use will be communicated through in-app notices, updates to this Privacy Policy, or publication on the official Halal Formosa website. Continued use of the Service after such updates constitutes acceptance of the revised purposes."
+      },
+      {
+        "title": "Article 6 - Retention Period",
+        "list": [
+          "Personal data is retained while user accounts remain active.",
+          "Account deletion requests are processed within 30 days.",
+          "User-submitted reports are anonymized after 30 days and may be retained indefinitely.",
+          "Donation records may be anonymized and retained for accounting and transparency purposes."
+        ]
+      },
+      {
+        "title": "Article 7 - Third-Party Disclosure",
+        "list": [
+          "Halal Formosa does not sell or share personal data with third parties for marketing purposes.",
+          "User authentication is provided through Google services.",
+          "Voluntary support contributions are processed via bobaboba.me (AnyoneLab).",
+          "Payments for Halal Formosa Pro subscriptions are processed by the respective app store platform, and Halal Formosa does not store or process payment card information."
+        ]
+      },
+      {
+        "title": "Article 8 - User Rights: Access, Correction, and Deletion",
+        "list": [
+          "Users may request access to, correction of, or deletion of their personal data by contacting support[@]halalformosa.com.",
+          "Login information associated with Google accounts must be managed directly through Google account settings.",
+          "Account deletion requests are processed within 30 days.",
+          "User-submitted reports remain stored in anonymized form after account deletion."
+        ]
+      },
+      {
+        "title": "Article 9 - Data Suspension and Misuse",
+        "text": "Users who believe their personal data has been misused or improperly handled may contact the Halal Formosa team, operated by YiQi Global Consulting, at support[@]halalformosa.com for review and assistance."
+      },
+      {
+        "title": "Article 10 - Cookie and Local Storage",
+        "list": [
+          "The Service does not use browser cookies.",
+          "Local storage may be used to store non-personal preferences and technical data (such as language settings or cached configurations) to load services faster and improve performance."
+        ]
+      },
+      {
+        "title": "Article 11 - Security Measures",
+        "text": "Halal Formosa uses Supabase authentication, HTTPS encryption, and restricted access controls to protect personal data."
+      },
+      {
+        "title": "Article 12 - International and Religious Considerations",
+        "text": "Disputes are first approached through Shariah principles of fairness. If unresolved, matters are governed by Taiwan law under the jurisdiction of the Taipei District Court."
+      },
+      {
+        "title": "Article 13 - Changes to this Policy",
+        "text": "Updates to this Privacy Policy will be published within the application and reflected by the 'Last Updated' date shown above. Changes take effect immediately."
+      },
+      {
+        "title": "Article 14 - Contact",
+        "text": "For privacy-related inquiries or requests, please contact: support[@]halalformosa.com"
+      }
+    ]
+  },
+  "termsPage": {
+    "title": "Terms of Service",
+    "intro": "These Terms of Service (\"Terms\") apply to the Halal Formosa mobile application and related services (the \"Service\"). The Service is published and operated by YiQi Global Consulting (藝啟文創行銷有限公司). By using the Service, Users agree to be bound by these Terms.",
+    "effectiveDate": "Effective Date: August 2025",
+    "lastUpdated": "Last Updated: February 2026",
+    "serviceName": "Service Name",
+    "serviceProvider": "Service Provider",
+    "sections": [
+      {
+        "title": "Article 1 - Acceptance of Terms",
+        "text": "Using the Service constitutes acceptance of these Terms."
+      },
+      {
+        "title": "Article 2 - Service Description and Disclaimer",
+        "list": [
+          "Barcode scanning for halal status",
+          "Ingredient analysis",
+          "Halal status labeling",
+          "User authentication",
+          "Map exploration for halal-friendly locations",
+          "Advertisements to support operations",
+          "<strong>Halal Formosa is not an official halal certification authority</strong> and does not issue halal certificates.",
+          "All halal-related information is provided <strong>for reference purposes only</strong> and must be independently verified by users with manufacturers, halal certification bodies, or qualified Islamic authorities.",
+          "Ingredient analysis may use <strong>OCR-based text recognition</strong>. Detection accuracy depends on camera quality, image clarity, lighting, and packaging design.",
+          "The Halal Formosa team, operated by YiQi Global Consulting, will make reasonable and best-effort attempts to keep information up to date; however, users are advised to confirm information independently.",
+          "Location accuracy depends on Google Maps and device GPS.",
+          "Service is provided as a <strong>voluntary community project</strong> without commercial guarantees."
+        ]
+      },
+      {
+        "title": "Article 2A - Service Operator",
+        "text": "Halal Formosa is a digital information platform operated by YiQi Global Consulting (藝啟文創行銷有限公司). The Service does not provide halal certification, religious rulings (fatwa), or official verification."
+      },
+      {
+        "title": "Article 3 - Voluntary Support",
+        "list": [
+          "The Service provides an optional voluntary support feature.",
+          "Support contributions are processed via <strong>bobaboba.me (AnyoneLab)</strong>.",
+          "Support is used to maintain server infrastructure, operational costs, and ongoing development.",
+          "Support contributions are non-refundable.",
+          "Providing support does not unlock features or grant ownership, rights, or privileges."
+        ]
+      },
+      {
+        "title": "Article 4 - Halal Formosa Pro Membership",
+        "list": [
+          "Halal Formosa offers an optional paid monthly subscription known as <strong>Halal Formosa Pro</strong>.",
+          "Halal Formosa Pro provides access to additional features not available in the free version.",
+          "Payment for Halal Formosa Pro is currently available only through the Halal Formosa application and processed via authorized in-app payment platforms.",
+          "Pricing details and descriptions of unlocked features are available on <strong>halalformosa.com</strong> and may be updated from time to time.",
+          "Subscriptions are billed monthly and automatically renew unless canceled through the applicable platform.",
+          "Users may cancel at any time; Pro access remains until the end of the billing period.",
+          "Subscription fees are non-refundable except where required by applicable law or platform policy."
+        ]
+      },
+      {
+        "title": "Article 5 - User Accounts",
+        "list": [
+          "All users may create an account to access certain features.",
+          "Users are responsible for maintaining the confidentiality of their account credentials.",
+          "Halal Formosa Pro access is linked to the user account used to subscribe.",
+          "Deleting an account does not pause, cancel, or refund any active subscription.",
+          "Subscription cancellation must be handled through the applicable app store platform.",
+          "Account deletion is not currently available through the application and must be requested via email.",
+          "Deletion requests are processed within 30 days.",
+          "Submitted reports remain anonymized after account deletion.",
+          "Unauthorized access or misuse may result in suspension or termination."
+        ]
+      },
+      {
+        "title": "Article 6 - Data Submission, Verification, and Reporting",
+        "list": [
+          "All users may submit product or location data through the Service.",
+          "Submitted data is subject to verification by administrators or approved contributors.",
+          "Administrators and contributors may add, edit, and manage product and map-related data.",
+          "All users may report inaccurate, outdated, or misleading product or map information.",
+          "Reports are reviewed within <strong>2 x 24 hours</strong> on a best-effort basis.",
+          "Contributor applications must be submitted via email to <strong>support[@]halalformosa.com</strong>.",
+          "Contributor applications are reviewed within <strong>2 x 24 hours</strong>, and applicants are notified by email.",
+          "Contributor status becomes effective only after official confirmation."
+        ]
+      },
+      {
+        "title": "Article 7 - Intellectual Property",
+        "ordered": [
+          {
+            "title": "Database and User Submissions",
+            "list": [
+              "The Halal Formosa database and compiled content are the property of <strong>Halal Formosa</strong>.",
+              "All submitted data becomes part of the Halal Formosa database.",
+              "Database content may be shared by users and contributors for non-commercial, educational, or community purposes.",
+              "By submitting data, users grant Halal Formosa a non-exclusive, royalty-free right to use and distribute the content.",
+              "Commercial reuse, resale, or exploitation without written permission is strictly prohibited."
+            ]
+          },
+          {
+            "title": "Explore and Map Features",
+            "list": [
+              "Map data may include information from Google Maps and other third-party services.",
+              "Screenshots and sharing are permitted for personal, educational, or community-sharing purposes only.",
+              "Third-party content remains subject to the respective providers' terms."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Article 8 - Moderation",
+        "list": [
+          "Submitted reports and data may be reviewed to ensure accuracy.",
+          "Moderation is conducted by Halal Formosa administrators.",
+          "Inaccurate or inappropriate content may be corrected or removed.",
+          "Moderation reviews are handled within <strong>2 x 24 hours</strong> on a best-effort basis.",
+          "Honest mistakes made in good faith will not result in penalties."
+        ]
+      },
+      {
+        "title": "Article 9 - Advertising",
+        "list": [
+          "Advertisements may be displayed in the free version to support server maintenance and development.",
+          "Users subscribed to Halal Formosa Pro will not see advertisements.",
+          "Advertising content is provided by third-party ad networks such as Google AdMob.",
+          "Halal Formosa does not control third-party ad content and does not store additional personal data specifically for advertising."
+        ]
+      },
+      {
+        "title": "Article 10 - Prohibited Conduct",
+        "list": [
+          "Submitting false or misleading data",
+          "Abusing the reporting system or submitting reports in bad faith",
+          "Attempting unauthorized access to systems",
+          "Uploading harmful or malicious content",
+          "Misusing map or product reporting features",
+          "Impersonating Halal Formosa administrators, contributors, or team members",
+          "Circumventing or exploiting Halal Formosa Pro features",
+          "Exploiting bugs or system errors",
+          "Commercial use without permission",
+          "Scraping or automated data extraction"
+        ]
+      },
+      {
+        "title": "Article 11 - Modifications",
+        "list": [
+          "Features and services may be modified or discontinued without notice.",
+          "Service availability is not guaranteed.",
+          "Updated Terms become effective upon release and are reflected by the 'Last Updated' date shown in this document."
+        ]
+      },
+      {
+        "title": "Article 12 - Governing Law",
+        "list": [
+          "Disputes shall first follow Shariah principles of fairness.",
+          "If unresolved, disputes fall under Taiwan law and the Taipei District Court."
+        ]
+      },
+      {
+        "title": "Article 13 - Contact",
+        "text": "For questions, account-related requests, contributor applications, or other inquiries, please contact: support[@]halalformosa.com"
+      }
+    ]
+  },
+  "seo": {
+    "defaults": {
+      "title": "Halal Formosa - Halal Map & Ingredient Scanner in Taiwan",
+      "description": "Halal Formosa is a Muslim-friendly platform in Taiwan for halal food discovery, ingredient scanning, and halal travel support."
+    },
+    "home": {
+      "title": "Halal Formosa - Halal Map & Ingredient Scanner in Taiwan",
+      "description": "Halal Formosa helps Muslims in Taiwan find halal food, scan ingredients, explore halal maps, and travel with confidence."
+    },
+    "about": {
+      "title": "About Halal Formosa - Muslim-Friendly Ecosystem in Taiwan",
+      "description": "Learn about Halal Formosa's mission, vision, and team building a trusted halal information ecosystem for Muslims in Taiwan."
+    },
+    "contact": {
+      "title": "Contact Halal Formosa - Get in Touch",
+      "description": "Contact Halal Formosa for inquiries, collaborations, partnerships, or community support related to halal living in Taiwan."
+    },
+    "faq": {
+      "title": "FAQ - Halal Formosa",
+      "description": "Frequently asked questions about Halal Formosa, including halal products, halal restaurants, prayer places, and community contributions in Taiwan."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Halal Formosa",
+      "description": "Read Halal Formosa's Privacy Policy explaining how user data is collected, used, protected, and managed."
+    },
+    "terms": {
+      "title": "Terms of Service - Halal Formosa",
+      "description": "Review Halal Formosa's Terms of Service governing the use of the halal map, ingredient scanner, and related services."
+    }
+  }
+}

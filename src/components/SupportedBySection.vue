@@ -6,12 +6,11 @@
   >
     <div class="max-w-6xl mx-auto px-6 text-center">
       <!-- Title -->
-      <h2 class="text-4xl font-bold text-center mb-4">Supported By</h2>
+      <h2 class="text-4xl font-bold text-center mb-4">{{ t("supportedBy.title") }}</h2>
 
       <!-- Subtitle -->
       <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-        We are grateful for the support of organizations and communities who
-        share our mission.
+        {{ t("supportedBy.subtitle") }}
       </p>
 
       <!-- Logos -->
@@ -44,6 +43,7 @@
 <script setup lang="ts">
 
 import { computed } from "vue"
+import { t } from "@/i18n";
 
 const visibleSupporters = computed(() =>
     supporters.filter(s => s.active)

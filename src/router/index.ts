@@ -1,121 +1,246 @@
-import { createRouter, createWebHistory } from "vue-router"
+﻿import { watch } from "vue";
+import {
+  createRouter,
+  createWebHistory,
+  type RouteLocationNormalizedLoaded,
+} from "vue-router";
 
-import Layout from "@/layouts/Layout.vue"
-import Home from "@/pages/Home.vue"
-import PrivacyPolicy from "@/pages/PrivacyPolicy.vue"
-import TermsOfService from "@/pages/TermsOfService.vue"
-import About from "@/pages/About.vue"
-import Contact from "@/pages/Contact.vue"
+import { getMessage, locale, t } from "@/i18n";
+import Layout from "@/layouts/Layout.vue";
+import Home from "@/pages/Home.vue";
+import PrivacyPolicy from "@/pages/PrivacyPolicy.vue";
+import TermsOfService from "@/pages/TermsOfService.vue";
+import About from "@/pages/About.vue";
+import Contact from "@/pages/Contact.vue";
 import FAQ from "@/pages/FAQ.vue";
 
+const SITE_URL = "https://halalformosa.com";
+const DEFAULT_TITLE_KEY = "seo.defaults.title";
+const DEFAULT_DESCRIPTION_KEY = "seo.defaults.description";
+const ROUTE_JSONLD_ID = "route-schema-data";
+
+type FaqItem = {
+  q: string;
+  a: string;
+};
+
 const router = createRouter({
-    history: createWebHistory(),
+  history: createWebHistory(),
 
-    routes: [
+  routes: [
+    {
+      path: "/",
+      component: Layout,
+      children: [
         {
-            path: "/",
-            component: Layout,
-            children: [
-                {
-                    path: "",
-                    name: "Home",
-                    component: Home,
-                    meta: {
-                        title: "Halal Formosa - Halal Map & Ingredient Scanner in Taiwan",
-                        description:
-                            "Halal Formosa helps Muslims in Taiwan find halal food, scan ingredients, explore halal maps, and travel with confidence."
-                    },
-                },
-                {
-                    path: "about",
-                    name: "About",
-                    component: About,
-                    meta: {
-                        title: "About Halal Formosa - Muslim-Friendly Ecosystem in Taiwan",
-                        description:
-                            "Learn about Halal Formosa’s mission, vision, and team building a trusted halal information ecosystem for Muslims in Taiwan."
-                    },
-                },
-                {
-                    path: "contact",
-                    name: "Contact",
-                    component: Contact,
-                    meta: {
-                        title: "Contact Halal Formosa - Get in Touch",
-                        description:
-                            "Contact Halal Formosa for inquiries, collaborations, partnerships, or community support related to halal living in Taiwan."
-                    },
-                },
-                {
-                    path: "faq",
-                    name: "FAQ",
-                    component: FAQ,
-                    meta: {
-                        title: "FAQ - Halal Formosa",
-                        description:
-                            "Frequently asked questions about Halal Formosa, including halal products, halal restaurants, prayer places, and community contributions in Taiwan."
-                    },
-                },
-
-                {
-                    path: "privacy",
-                    name: "Privacy",
-                    component: PrivacyPolicy,
-                    meta: {
-                        title: "Privacy Policy - Halal Formosa",
-                        description:
-                            "Read Halal Formosa’s Privacy Policy explaining how user data is collected, used, protected, and managed."
-                    },
-                },
-                {
-                    path: "terms",
-                    name: "Terms",
-                    component: TermsOfService,
-                    meta: {
-                        title: "Terms of Service - Halal Formosa",
-                        description:
-                            "Review Halal Formosa’s Terms of Service governing the use of the halal map, ingredient scanner, and related services."
-                    },
-                },
-            ],
+          path: "",
+          name: "Home",
+          component: Home,
+          meta: {
+            titleKey: "seo.home.title",
+            descriptionKey: "seo.home.description",
+          },
         },
-    ],
-
-    scrollBehavior(to, _from, savedPosition) {
-        if (savedPosition) return savedPosition
-        if (to.hash) {
-            return { el: to.hash, behavior: "smooth" }
-        }
-        return { top: 0 }
+        {
+          path: "about",
+          name: "About",
+          component: About,
+          meta: {
+            titleKey: "seo.about.title",
+            descriptionKey: "seo.about.description",
+          },
+        },
+        {
+          path: "contact",
+          name: "Contact",
+          component: Contact,
+          meta: {
+            titleKey: "seo.contact.title",
+            descriptionKey: "seo.contact.description",
+          },
+        },
+        {
+          path: "faq",
+          name: "FAQ",
+          component: FAQ,
+          meta: {
+            titleKey: "seo.faq.title",
+            descriptionKey: "seo.faq.description",
+          },
+        },
+        {
+          path: "privacy",
+          name: "Privacy",
+          component: PrivacyPolicy,
+          meta: {
+            titleKey: "seo.privacy.title",
+            descriptionKey: "seo.privacy.description",
+          },
+        },
+        {
+          path: "terms",
+          name: "Terms",
+          component: TermsOfService,
+          meta: {
+            titleKey: "seo.terms.title",
+            descriptionKey: "seo.terms.description",
+          },
+        },
+      ],
     },
-})
+  ],
 
+  scrollBehavior(to, _from, savedPosition) {
+    if (savedPosition) return savedPosition;
+    if (to.hash) {
+      return { el: to.hash, behavior: "smooth" };
+    }
+    return { top: 0 };
+  },
+});
+
+const ensureMetaByName = (name: string): HTMLMetaElement => {
+  let element = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement | null;
+  if (element) return element;
+
+  element = document.createElement("meta");
+  element.setAttribute("name", name);
+  document.head.appendChild(element);
+  return element;
+};
+
+const ensureMetaByProperty = (property: string): HTMLMetaElement => {
+  let element = document.querySelector(
+    `meta[property="${property}"]`
+  ) as HTMLMetaElement | null;
+  if (element) return element;
+
+  element = document.createElement("meta");
+  element.setAttribute("property", property);
+  document.head.appendChild(element);
+  return element;
+};
+
+const ensureCanonical = (): HTMLLinkElement => {
+  let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+  if (canonical) return canonical;
+
+  canonical = document.createElement("link");
+  canonical.setAttribute("rel", "canonical");
+  document.head.appendChild(canonical);
+  return canonical;
+};
+
+const upsertJsonLd = (id: string, payload: object) => {
+  let script = document.getElementById(id) as HTMLScriptElement | null;
+  if (!script) {
+    script = document.createElement("script");
+    script.id = id;
+    script.type = "application/ld+json";
+    document.head.appendChild(script);
+  }
+
+  script.textContent = JSON.stringify(payload);
+};
+
+const buildPageUrl = (path: string) => {
+  const cleanPath = path === "/" ? "/" : path.replace(/\/$/, "");
+  return new URL(cleanPath, SITE_URL).toString();
+};
+
+const applyRouteStructuredData = (
+  to: RouteLocationNormalizedLoaded,
+  title: string,
+  description: string,
+  canonicalUrl: string
+) => {
+  const baseWebPage = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: canonicalUrl,
+    inLanguage: locale.value === "zh-tw" ? "zh-TW" : "en",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Halal Formosa",
+      url: SITE_URL,
+    },
+  };
+
+  if (to.name !== "FAQ") {
+    upsertJsonLd(ROUTE_JSONLD_ID, baseWebPage);
+    return;
+  }
+
+  const faqItems = getMessage<FaqItem[]>("faqPage.items", []);
+  const mainEntity = faqItems.slice(0, 12).map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  }));
+
+  upsertJsonLd(ROUTE_JSONLD_ID, {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: canonicalUrl,
+    inLanguage: locale.value === "zh-tw" ? "zh-TW" : "en",
+    mainEntity,
+  });
+};
+
+const applyDocumentMeta = (to: RouteLocationNormalizedLoaded) => {
+  const titleKey =
+    typeof to.meta?.titleKey === "string" ? to.meta.titleKey : DEFAULT_TITLE_KEY;
+
+  const descriptionKey =
+    typeof to.meta?.descriptionKey === "string"
+      ? to.meta.descriptionKey
+      : DEFAULT_DESCRIPTION_KEY;
+
+  const title = t(titleKey);
+  const description = t(descriptionKey);
+  const canonicalUrl = buildPageUrl(to.path);
+  const ogLocale = locale.value === "zh-tw" ? "zh_TW" : "en_US";
+
+  document.title = title;
+
+  ensureMetaByName("description").setAttribute("content", description);
+  ensureMetaByName("robots").setAttribute(
+    "content",
+    "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+  );
+
+  ensureMetaByProperty("og:title").setAttribute("content", title);
+  ensureMetaByProperty("og:description").setAttribute("content", description);
+  ensureMetaByProperty("og:url").setAttribute("content", canonicalUrl);
+  ensureMetaByProperty("og:type").setAttribute("content", "website");
+  ensureMetaByProperty("og:site_name").setAttribute("content", "Halal Formosa");
+  ensureMetaByProperty("og:locale").setAttribute("content", ogLocale);
+
+  ensureMetaByName("twitter:card").setAttribute("content", "summary_large_image");
+  ensureMetaByName("twitter:title").setAttribute("content", title);
+  ensureMetaByName("twitter:description").setAttribute("content", description);
+  ensureMetaByName("twitter:url").setAttribute("content", canonicalUrl);
+
+  ensureCanonical().setAttribute("href", canonicalUrl);
+
+  applyRouteStructuredData(to, title, description, canonicalUrl);
+};
 
 router.afterEach((to) => {
-    const defaultTitle =
-        "Halal Formosa - Halal Map & Ingredient Scanner in Taiwan"
+  applyDocumentMeta(to);
+});
 
-    const defaultDescription =
-        "Halal Formosa is a Muslim-friendly platform in Taiwan for halal food discovery, ingredient scanning, and halal travel support."
+watch(
+  locale,
+  () => {
+    applyDocumentMeta(router.currentRoute.value);
+  },
+  { immediate: true }
+);
 
-    // Title
-    document.title =
-        typeof to.meta?.title === "string"
-            ? to.meta.title
-            : defaultTitle
-
-    // Meta description
-    const desc = document.querySelector('meta[name="description"]')
-    if (desc) {
-        desc.setAttribute(
-            "content",
-            typeof to.meta?.description === "string"
-                ? to.meta.description
-                : defaultDescription
-        )
-    }
-})
-
-
-
-export default router
+export default router;

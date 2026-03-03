@@ -1,0 +1,601 @@
+﻿{
+  "common": {
+    "brand": "Halal Formosa",
+    "download": "下載",
+    "iosComingSoon": "iOS 即將推出",
+    "instagram": "Instagram",
+    "tiktok": "TikTok"
+  },
+  "header": {
+    "nav": {
+      "features": "功能特色",
+      "pricing": "方案價格",
+      "testimonials": "使用者評價",
+      "about": "關於我們",
+      "faq": "常見問題",
+      "contact": "聯絡我們"
+    },
+    "languageLabel": "語言",
+    "themeLight": "淺色",
+    "themeDark": "深色",
+    "languages": {
+      "en": "English",
+      "zh-tw": "繁體中文"
+    }
+  },
+  "hero": {
+    "titleHighlight": "清真生活更簡單",
+    "titleSuffix": "在台灣",
+    "description": "探索清真友善美食、掃描成分、查看清真地圖，讓你在台灣安心旅行。",
+    "mockupAlt": "Halal Formosa 應用程式示意圖"
+  },
+  "features": {
+    "title": "核心功能",
+    "subtitle": "讓每位穆斯林在台灣的生活更輕鬆、更安心",
+    "items": [
+      {
+        "title": "成分分析",
+        "description": "即時掃描並辨識可疑、需留意或清真友善的成分。"
+      },
+      {
+        "title": "商品搜尋",
+        "description": "探索全台數千種穆斯林友善商品。"
+      },
+      {
+        "title": "清真地圖",
+        "description": "在台灣各地尋找清真餐廳、商店與清真寺。"
+      },
+      {
+        "title": "社群共創",
+        "description": "由真實使用者每日貢獻清真資訊，共同打造可靠內容。"
+      }
+    ]
+  },
+  "supportedBy": {
+    "title": "支持單位",
+    "subtitle": "感謝各個組織與社群支持我們的使命，與我們一同推動清真友善環境。"
+  },
+  "pricing": {
+    "title": "價格方案",
+    "subtitle": "選擇最適合你的方案",
+    "periods": {
+      "week": "週",
+      "month": "月",
+      "year": "年"
+    },
+    "plans": {
+      "free": {
+        "title": "免費版",
+        "subtitle": "立即開始探索台灣",
+        "features": [
+          "清真地圖使用",
+          "基礎成分掃描",
+          "每日 10 次掃描",
+          "收藏清單（最多 10 項）"
+        ],
+        "disabledFeatures": [
+          "無限次掃描",
+          "收藏項目無上限",
+          "為你推薦動態",
+          "無廣告"
+        ]
+      },
+      "proWeekly": {
+        "title": "專業版（週）",
+        "subtitle": "適合短期旅遊與訪客"
+      },
+      "proMonthly": {
+        "title": "專業版（月）",
+        "subtitle": "適合經常往返台灣的你"
+      },
+      "proAnnual": {
+        "title": "專業版（年）",
+        "subtitle": "最適合在台灣生活的穆斯林",
+        "badge": "最超值",
+        "saveText": "比月費方案省超過 40%，每天不到 NT$2"
+      },
+      "proFeatures": [
+        "包含免費版所有功能",
+        "AI 成分說明",
+        "為你推薦動態",
+        "無廣告",
+        "收藏項目無上限",
+        "無限次掃描",
+        "24/7 優先客服支援"
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "深受使用者喜愛",
+    "subtitle": "來自在台穆斯林的真實使用經驗，Halal Formosa 已成為他們每日依賴的工具。",
+    "paginationAriaLabel": "前往評價頁面",
+    "items": [
+      {
+        "name": "Fitricia",
+        "role": "在台印尼居民",
+        "message": "感謝真主，在台灣找清真產品變得容易許多，只要掃描就能查看。有時候我們以為產品安全，掃描後才發現有疑慮成分。謝謝 Halal Formosa！"
+      },
+      {
+        "name": "Rarasanti Rania",
+        "role": "在台博士生",
+        "message": "非常感謝 Halal Formosa 為在台穆斯林帶來實用且必要的解決方案。清真成分檢查非常方便，我也很喜歡介面設計，尤其是商品搜尋功能。"
+      },
+      {
+        "name": "Ogi Dani Sakarov",
+        "role": "在台博士生暨 IMA Taiwan 主任",
+        "message": "Halal Formosa 是在台穆斯林非常實用的工具。清真掃描可靠、清真餐廳資訊完整，禮拜地點也標示清楚。"
+      },
+      {
+        "name": "dr. Herlin Ajeng Nurrahma, M.Biomed",
+        "role": "台北博士候選人",
+        "message": "我非常喜歡這個 App。對於在台少數族群的穆斯林來說，Halal Formosa 非常有幫助，讓購物與外食時選擇清真食物更安心。"
+      }
+    ]
+  },
+  "googlePlayReviews": {
+    "title": "Google Play 使用者評價",
+    "subtitle": "來自 Android 使用者的真實評論，他們透過 Halal Formosa 進行清真探索、成分檢查與穆斯林友善旅遊。"
+  },
+  "social": {
+    "title": "追蹤我們的社群平台",
+    "subtitle": "在各大社群平台與 Halal Formosa 保持連結"
+  },
+  "finalCta": {
+    "title": "今天就開始你的清真旅程",
+    "subtitle": "加入成千上萬的穆斯林旅人，在台灣安心探索",
+    "appStoreAlt": "App Store",
+    "googlePlayAlt": "在 Google Play 下載",
+    "webAlt": "開啟網頁版"
+  },
+  "footer": {
+    "tagline": "台灣首個清真與穆斯林友善生態系",
+    "product": "產品",
+    "company": "公司",
+    "connect": "社群連結",
+    "privacyPolicy": "隱私權政策",
+    "termsOfService": "服務條款",
+    "copyright": "© 2025 Halal Formosa. 版權所有。",
+    "poweredBy": "技術支持"
+  },
+  "aboutPage": {
+    "title": "關於我們",
+    "intro": "Halal Formosa 是台灣首個穆斯林友善數位生態系，協助穆斯林尋找清真飲食、掃描成分、探索清真地圖，並在台灣安心生活與旅行。",
+    "brandLine": "Halal Formosa | 清真福爾摩沙",
+    "visionTitle": "我們的願景",
+    "visionText": "透過協作打造台灣值得信賴的清真資訊生態系，讓穆斯林能更有信心地生活與旅行。",
+    "missionTitle": "我們的使命",
+    "missionParagraphs": [
+      "我們致力於以負責任的科技提供準確、易取得且由社群共建的清真資訊，支持在台與來台穆斯林。",
+      "我們透過打造清真探索工具、推動透明資訊分享，並與穆斯林組織、清真認證機構、穆斯林友善旅遊單位與社群合作夥伴共同協作。",
+      "透過責任科技與開放合作，我們期望支持台灣穆斯林社群的長期成長與永續發展。"
+    ],
+    "timelineTitle": "發展時間軸",
+    "teamTitle": "團隊成員",
+    "photoPlaceholder": "照片",
+    "close": "關閉",
+    "timeline": [
+      {
+        "date": "2025 年 7 月 25 日",
+        "description": "Halal Formosa 正式成立，並推出初版網頁應用，提供清真探索相關功能。"
+      },
+      {
+        "date": "2025 年 8 月 2 日",
+        "description": "Halal Formosa 行動應用已上架 Google Play 商店；iOS 版本仍在開發中。"
+      },
+      {
+        "date": "2025 年 12 月 10 日",
+        "description": "Halal Formosa 官方網站與公開落地頁正式上線，提供更清楚的平台資訊與導引。"
+      },
+      {
+        "date": "2026 年 1 月 27 日",
+        "description": "Halal Formosa 正式向以下單位介紹：",
+        "link": {
+          "label": "駐台北印尼經濟貿易代表處（KDEI Taipei）",
+          "url": "https://kdei-taipei.org/"
+        },
+        "extra": "雙方於正式會談中表達合作意願，期望透過更完善的資訊與社群導向行動，支持在台與來台印尼及穆斯林社群。"
+      },
+      {
+        "date": "2026 年 1 月 27 日",
+        "description": "Halal Formosa 與以下單位建立出版與營運合作：",
+        "link": {
+          "label": "YiQi Global Consulting (藝啟文創行銷有限公司)",
+          "url": "https://www.yiqiconsultant.com/"
+        },
+        "extra": "在此合作下，YiQi Global Consulting 支援平台在台灣的出版、登記與營運需求，促進正式商業活動與機構合作。"
+      }
+    ],
+    "team": [
+      {
+        "name": "Rakha Ramadhana A.B.",
+        "role": "創辦人",
+        "description": [
+          "Halal Formosa 平台首席工程師與系統架構設計者",
+          "負責 iOS、Android 與 Web 應用的開發與維護",
+          "建置與維運官方網站、落地頁與核心基礎架構"
+        ]
+      },
+      {
+        "name": "Sherlis Oktaviani",
+        "role": "共同創辦人",
+        "description": [
+          "主導社群媒體實作與品牌數位形象",
+          "規劃與製作 Reels、影片與限動等內容",
+          "制定行銷策略與社群拓展計畫"
+        ]
+      },
+      {
+        "name": "Paul Yang",
+        "role": "行銷總監",
+        "description": [
+          "主導 Halal Formosa 的行銷策略、合作關係與對外連結",
+          "負責資源整合、募資機會與商家合作",
+          "串聯台灣政府與產業利害關係人，支持平台成長"
+        ]
+      }
+    ]
+  },
+  "faqPage": {
+    "title": "常見問題",
+    "subtitle": "關於使用 Halal Formosa 的常見提問",
+    "items": [
+      {
+        "q": "Halal Formosa 上列出的商品都一定是清真嗎？",
+        "a": "不一定。Halal Formosa 會依據現有清真認證、官方聲明與成分分析，將商品標示為清真、穆斯林友善、疑慮（syubhah）或非清真（haram），以協助使用者做出判斷。"
+      },
+      {
+        "q": "我可以新增清真商品資訊嗎？",
+        "a": "可以。任何人都可針對在台灣販售或可取得的商品提交資訊，幫助資料庫更貼近在地穆斯林需求。"
+      },
+      {
+        "q": "新增商品資訊需要哪些條件？",
+        "a": "可在 Product 分頁按下加號（+）提交。至少需提供以下其中一項：清真標章或認證、透過 Halal Formosa 進行成分分析結果、或清楚的商品照片。所有資料會先經審核後才發布。"
+      },
+      {
+        "q": "如果有人新增資訊不清楚，甚至是非清真商品怎麼辦？",
+        "a": "提交流程中可透過成分分析與輔助資訊辨識疑慮或非清真成分。我們團隊會先審核與驗證後才發布，以維持資訊透明與準確。"
+      },
+      {
+        "q": "我要如何信任 Halal Formosa 的資訊？",
+        "a": "Halal Formosa 與台灣多個穆斯林社群與組織合作。支持與合作單位皆公開列於網站，且所有提交內容都需經審核驗證後才會上線。"
+      },
+      {
+        "q": "我要如何找附近的清真餐廳或禮拜場所？",
+        "a": "Halal Formosa 提供地圖功能，會依據你的目前位置顯示附近的清真餐廳與禮拜地點。"
+      },
+      {
+        "q": "我可以新增清真地點資訊嗎？",
+        "a": "目前地點提交僅開放給核准的貢獻者，以確保地點資訊準確、可靠且持續更新。"
+      },
+      {
+        "q": "我要如何成為 Halal Formosa 貢獻者？",
+        "a": "若你有興趣，請寄信至 support[@]halalformosa.com，標題請填寫 'Becoming Halal Formosa Contributor'。我們將審核後回覆後續流程。"
+      },
+      {
+        "q": "如果我發現商品或地點資訊過時或錯誤，該怎麼辦？",
+        "a": "你可以在 App 內使用回報功能提交報告或工單。我們會審核與驗證後進行更新。"
+      },
+      {
+        "q": "Halal Formosa 會從安裝使用者身上獲利嗎？",
+        "a": "會。Halal Formosa 採 B2C 與 B2B 混合模式。B2C 方面提供 Halal Formosa Pro 訂閱方案，並在免費版顯示應用內廣告以支持平台維運；同時也透過 B2B 商業合作支持生態系發展。"
+      },
+      {
+        "q": "我要在哪裡提供回饋或申訴？",
+        "a": "你可透過 Contact 頁面聯繫，或寄信至 support[@]halalformosa.com 提供意見與回饋。"
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "聯絡我們",
+    "subtitle": "有問題、回饋或合作想法嗎？歡迎與我們聯繫。",
+    "successMessage": "謝謝你！你的訊息已成功送出。",
+    "reachUs": "聯絡方式",
+    "officeInfo": "辦公室資訊",
+    "officeIntro": "Halal Formosa 與出版及營運夥伴 YiQi Global Consulting（藝啟文創行銷有限公司）合作營運。",
+    "officeAddressLabel": "辦公地址",
+    "officeAddressLine1": "YiQi Global Consulting Office",
+    "officeAddressLine2": "114064 臺北市內湖區洲子街12號2樓 (R.O.C.)",
+    "officeAddressLine3": "2F, No. 12, Zhouzi St., Neihu District, Taipei City 114, Taiwan",
+    "officePhoneLabel": "辦公室電話",
+    "visitNote": "僅接受預約拜訪。",
+    "sendMessage": "傳送訊息",
+    "form": {
+      "name": "你的姓名",
+      "email": "你的電子郵件",
+      "message": "你的訊息",
+      "submit": "送出訊息"
+    }
+  },
+  "privacyPage": {
+    "title": "隱私權政策",
+    "intro": "本隱私權政策（以下稱「本政策」）說明 YiQi Global Consulting（藝啟文創行銷有限公司）（以下稱「我們」）如何處理透過 Halal Formosa 行動應用程式（以下稱「本服務」）所蒐集的個人與非個人資訊。本服務由該公司於台灣發布與營運。使用本服務即表示你同意依本政策進行資訊蒐集、保存與使用。",
+    "effectiveDate": "生效日期：2025 年 8 月",
+    "lastUpdated": "最後更新：2026 年 2 月",
+    "sections": [
+      {
+        "title": "第 1 條 - 個人資料定義",
+        "text": "「個人資料」係指可識別個人的資訊，例如登入驗證時蒐集的 Google 帳號電子郵件、顯示名稱與頭像。其他使用資訊可能以匿名或彙總方式保存。"
+      },
+      {
+        "title": "第 2 條 - 個人資料蒐集方式",
+        "list": [
+          "使用 Google 登入時，我們會蒐集你的電子郵件、顯示名稱與頭像。",
+          "我們會蒐集與帳號相關之可識別與匿名化活動紀錄，用於監控、維護、安全分析與服務優化。",
+          "地圖功能會蒐集裝置的大略位置，以顯示附近清真友善地點。",
+          "捐助相關資訊僅保存交易中繼資料；Halal Formosa 不儲存信用卡資料。"
+        ]
+      },
+      {
+        "title": "第 3 條 - 使用目的",
+        "list": [
+          "驗證使用者並提供服務功能存取",
+          "提供以位置為基礎的探索與地圖功能",
+          "監控系統效能並持續改善服務",
+          "偵測、預防並處理濫用或安全問題",
+          "維持自願支持款項的透明與紀錄",
+          "保存語言與基本設定等使用者偏好"
+        ]
+      },
+      {
+        "title": "第 4 條 - 廣告與追蹤",
+        "list": [
+          "免費版本會顯示 Google AdMob 橫幅廣告。",
+          "廣告收益用於伺服器維運與平台持續開發。",
+          "訂閱 Halal Formosa Pro 的使用者不會看到廣告。",
+          "廣告可能依 Google 設定為個人化或非個人化。",
+          "Halal Formosa 不會為廣告目的額外蒐集個人資料。",
+          "Google AdMob 可能依其政策處理裝置資訊、互動資料與大略位置。",
+          "<a class='text-[#d97b1a] underline' href='https://policies.google.com/technologies/ads' target='_blank'>Google 廣告政策</a>"
+        ]
+      },
+      {
+        "title": "第 5 條 - 使用目的變更",
+        "text": "資料使用目的若有變更，將透過應用程式公告、更新本政策或官網發布通知。於更新後持續使用本服務，視為同意修訂內容。"
+      },
+      {
+        "title": "第 6 條 - 保存期間",
+        "list": [
+          "帳號啟用期間內將持續保存個人資料。",
+          "刪除帳號申請將於 30 天內處理。",
+          "使用者回報資料於 30 天後匿名化，並可能長期保存。",
+          "捐助紀錄可匿名化後保存，以用於會計與透明化目的。"
+        ]
+      },
+      {
+        "title": "第 7 條 - 第三方揭露",
+        "list": [
+          "Halal Formosa 不會為行銷目的出售或分享個人資料給第三方。",
+          "使用者驗證由 Google 服務提供。",
+          "自願支持款項透過 bobaboba.me（AnyoneLab）處理。",
+          "Halal Formosa Pro 訂閱付款由各應用商店處理，Halal Formosa 不處理或儲存信用卡資訊。"
+        ]
+      },
+      {
+        "title": "第 8 條 - 使用者權利：查詢、更正與刪除",
+        "list": [
+          "可透過 support[@]halalformosa.com 申請查詢、更正或刪除個人資料。",
+          "Google 帳號登入相關資訊需由使用者自行於 Google 帳號設定管理。",
+          "刪除帳號申請將於 30 天內完成處理。",
+          "帳號刪除後，使用者回報資料將以匿名形式保留。"
+        ]
+      },
+      {
+        "title": "第 9 條 - 資料處理爭議",
+        "text": "若你認為個人資料遭不當使用或處理，可聯繫 Halal Formosa 團隊（由 YiQi Global Consulting 營運）至 support[@]halalformosa.com 申請協助。"
+      },
+      {
+        "title": "第 10 條 - Cookie 與本機儲存",
+        "list": [
+          "本服務不使用瀏覽器 Cookie。",
+          "本機儲存可能用於保存非個人偏好與技術資料（如語言設定或快取設定），以提升載入速度與效能。"
+        ]
+      },
+      {
+        "title": "第 11 條 - 安全措施",
+        "text": "Halal Formosa 採用 Supabase 驗證、HTTPS 加密與存取權限控管保護個人資料。"
+      },
+      {
+        "title": "第 12 條 - 國際與宗教考量",
+        "text": "爭議將優先依伊斯蘭公平原則處理；若無法解決，則依台灣法律並由台北地方法院管轄。"
+      },
+      {
+        "title": "第 13 條 - 政策變更",
+        "text": "本政策更新將於應用程式內公告，並以「最後更新」日期反映。變更公布後立即生效。"
+      },
+      {
+        "title": "第 14 條 - 聯絡方式",
+        "text": "如有隱私相關問題或申請，請聯繫：support[@]halalformosa.com"
+      }
+    ]
+  },
+  "termsPage": {
+    "title": "服務條款",
+    "intro": "本服務條款（以下稱「本條款」）適用於 Halal Formosa 行動應用與相關服務（以下稱「本服務」）。本服務由 YiQi Global Consulting（藝啟文創行銷有限公司）發布與營運。使用本服務即表示你同意受本條款拘束。",
+    "effectiveDate": "生效日期：2025 年 8 月",
+    "lastUpdated": "最後更新：2026 年 2 月",
+    "serviceName": "服務名稱",
+    "serviceProvider": "服務提供者",
+    "sections": [
+      {
+        "title": "第 1 條 - 條款同意",
+        "text": "使用本服務即表示你已同意本條款。"
+      },
+      {
+        "title": "第 2 條 - 服務內容與免責聲明",
+        "list": [
+          "清真狀態條碼掃描",
+          "成分分析",
+          "清真狀態標示",
+          "使用者驗證",
+          "清真友善地點地圖探索",
+          "用於支援營運的廣告",
+          "<strong>Halal Formosa 並非官方清真認證機構</strong>，亦不發放清真證書。",
+          "所有清真相關資訊僅供<strong>參考</strong>，使用者仍應向製造商、認證機構或合格宗教單位自行確認。",
+          "成分分析可能使用 <strong>OCR 文字辨識</strong>，準確度受相機品質、影像清晰度、光線與包裝設計影響。",
+          "由 YiQi Global Consulting 營運之 Halal Formosa 團隊將以合理最佳努力維持資訊更新，但仍建議使用者自行再確認。",
+          "位置準確性受 Google Maps 與裝置 GPS 影響。",
+          "本服務屬於<strong>社群性質的自願計畫</strong>，不提供商業保證。"
+        ]
+      },
+      {
+        "title": "第 2A 條 - 服務營運者",
+        "text": "Halal Formosa 是由 YiQi Global Consulting（藝啟文創行銷有限公司）營運的數位資訊平台。本服務不提供清真認證、宗教裁決（fatwa）或官方核可。"
+      },
+      {
+        "title": "第 3 條 - 自願支持",
+        "list": [
+          "本服務提供自願性支持功能。",
+          "支持款項由 <strong>bobaboba.me（AnyoneLab）</strong> 處理。",
+          "支持資金用於伺服器、營運與持續開發。",
+          "支持款項不提供退款。",
+          "提供支持不代表獲得所有權、特權或額外權利。"
+        ]
+      },
+      {
+        "title": "第 4 條 - Halal Formosa Pro 會員",
+        "list": [
+          "Halal Formosa 提供可選擇的付費月訂閱方案 <strong>Halal Formosa Pro</strong>。",
+          "Halal Formosa Pro 可使用免費版以外的進階功能。",
+          "目前 Halal Formosa Pro 付款僅能於應用程式內透過授權內購平台處理。",
+          "價格與功能說明可於 <strong>halalformosa.com</strong> 查看，並可能不定期調整。",
+          "訂閱為每月自動續訂，除非於對應平台取消。",
+          "可隨時取消；Pro 權限將持續至當期結束。",
+          "除法令或平台政策另有規定外，訂閱費不退款。"
+        ]
+      },
+      {
+        "title": "第 5 條 - 使用者帳號",
+        "list": [
+          "所有使用者皆可建立帳號以使用特定功能。",
+          "使用者需自行保管帳號憑證機密性。",
+          "Halal Formosa Pro 權限綁定於訂閱時使用的帳號。",
+          "刪除帳號不會暫停、取消或退還進行中的訂閱。",
+          "訂閱取消須透過對應應用商店處理。",
+          "目前 App 內不提供帳號刪除，需透過 Email 申請。",
+          "刪除申請將於 30 天內處理。",
+          "帳號刪除後，已提交回報資料會以匿名形式保留。",
+          "未授權存取或濫用可能導致停權或終止。"
+        ]
+      },
+      {
+        "title": "第 6 條 - 資料提交、驗證與回報",
+        "list": [
+          "所有使用者皆可提交商品或地點資料。",
+          "提交資料需經管理員或核准貢獻者驗證。",
+          "管理員與貢獻者可新增、編輯與管理商品及地圖資料。",
+          "所有使用者可回報不正確、過時或誤導資訊。",
+          "回報將以最佳努力原則於 <strong>2 x 24 小時</strong>內審核。",
+          "貢獻者申請請寄至 <strong>support[@]halalformosa.com</strong>。",
+          "申請將於 <strong>2 x 24 小時</strong>內審核並以 Email 通知。",
+          "貢獻者資格以正式核准通知為準。"
+        ]
+      },
+      {
+        "title": "第 7 條 - 智慧財產權",
+        "ordered": [
+          {
+            "title": "資料庫與使用者提交內容",
+            "list": [
+              "Halal Formosa 資料庫與彙整內容屬於 <strong>Halal Formosa</strong> 所有。",
+              "所有提交資料將納入 Halal Formosa 資料庫。",
+              "使用者與貢獻者可基於非商業、教育或社群目的分享資料庫內容。",
+              "提交資料即表示授予 Halal Formosa 非專屬、免權利金之使用與散布權。",
+              "未經書面同意，禁止商業重製、轉售或利用。"
+            ]
+          },
+          {
+            "title": "探索與地圖功能",
+            "list": [
+              "地圖資料可能包含 Google Maps 與其他第三方來源資訊。",
+              "允許截圖與分享於個人、教育或社群用途。",
+              "第三方內容仍受其各自條款規範。"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "第 8 條 - 內容審核",
+        "list": [
+          "提交回報與資料可能被審核以確保正確性。",
+          "審核由 Halal Formosa 管理員執行。",
+          "不準確或不適當內容可能被修正或移除。",
+          "審核將以最佳努力原則於 <strong>2 x 24 小時</strong>內處理。",
+          "基於善意的誠實錯誤不會受到懲罰。"
+        ]
+      },
+      {
+        "title": "第 9 條 - 廣告",
+        "list": [
+          "免費版可能顯示廣告，以支持伺服器維運與開發。",
+          "Halal Formosa Pro 訂閱者不會看到廣告。",
+          "廣告內容由 Google AdMob 等第三方廣告網路提供。",
+          "Halal Formosa 不控制第三方廣告內容，且不會為廣告目的額外儲存個人資料。"
+        ]
+      },
+      {
+        "title": "第 10 條 - 禁止行為",
+        "list": [
+          "提交虛假或誤導資料",
+          "濫用回報系統或惡意回報",
+          "嘗試未授權存取系統",
+          "上傳有害或惡意內容",
+          "濫用地圖或商品回報功能",
+          "冒充 Halal Formosa 管理員、貢獻者或團隊成員",
+          "規避或濫用 Halal Formosa Pro 功能",
+          "利用程式漏洞或系統錯誤",
+          "未經許可進行商業使用",
+          "爬蟲或自動化資料擷取"
+        ]
+      },
+      {
+        "title": "第 11 條 - 服務調整",
+        "list": [
+          "功能與服務可能在未通知下調整或終止。",
+          "不保證服務可用性。",
+          "更新條款於發布後即生效，並以本文件「最後更新」日期為準。"
+        ]
+      },
+      {
+        "title": "第 12 條 - 準據法",
+        "list": [
+          "爭議應先依伊斯蘭公平原則處理。",
+          "若無法解決，則依台灣法律並由台北地方法院管轄。"
+        ]
+      },
+      {
+        "title": "第 13 條 - 聯絡方式",
+        "text": "如有問題、帳號申請、貢獻者申請或其他事項，請聯繫：support[@]halalformosa.com"
+      }
+    ]
+  },
+  "seo": {
+    "defaults": {
+      "title": "Halal Formosa - 台灣清真地圖與成分掃描",
+      "description": "Halal Formosa 是台灣穆斯林友善平台，提供清真美食探索、成分掃描與清真旅遊支援。"
+    },
+    "home": {
+      "title": "Halal Formosa - 台灣清真地圖與成分掃描",
+      "description": "Halal Formosa 協助在台穆斯林探索清真飲食、掃描成分、使用清真地圖並安心旅行。"
+    },
+    "about": {
+      "title": "關於 Halal Formosa - 台灣穆斯林友善生態系",
+      "description": "了解 Halal Formosa 的使命、願景與團隊，如何在台灣打造可信賴的清真資訊生態系。"
+    },
+    "contact": {
+      "title": "聯絡 Halal Formosa",
+      "description": "歡迎聯繫 Halal Formosa，洽詢合作、夥伴關係與在台清真生活相關需求。"
+    },
+    "faq": {
+      "title": "常見問題 - Halal Formosa",
+      "description": "查看 Halal Formosa 常見問題，包括清真商品、清真餐廳、禮拜地點與社群共建資訊。"
+    },
+    "privacy": {
+      "title": "隱私權政策 - Halal Formosa",
+      "description": "閱讀 Halal Formosa 隱私權政策，了解資料如何被蒐集、使用、保護與管理。"
+    },
+    "terms": {
+      "title": "服務條款 - Halal Formosa",
+      "description": "檢視 Halal Formosa 服務條款，了解清真地圖、成分掃描與相關服務使用規範。"
+    }
+  }
+}

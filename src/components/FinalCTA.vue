@@ -1,12 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { t } from "@/i18n";
+</script>
 
 <template>
   <!-- Final CTA Section -->
   <section id="download" class="bg-gradient-to-r from-[#d97b1a] to-[#bf6c16] text-white py-20">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">Start Your Halal Journey Today</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">{{ t("finalCta.title") }}</h2>
       <p class="text-xl mb-8 text-orange-50">
-        Join thousands of Muslim travelers discovering Taiwan with confidence
+        {{ t("finalCta.subtitle") }}
       </p>
 
       <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -15,11 +17,11 @@
         <div class="relative w-40">
           <img
               src="/app-store.png"
-              alt="App Store"
+              :alt="t('finalCta.appStoreAlt')"
               class="w-full opacity-40"
           />
           <div class="absolute inset-0 bg-white/50 backdrop-blur-xs flex items-center justify-center rounded-lg">
-            <span class="text-[#843f00] font-semibold text-sm">iOS Coming Soon</span>
+            <span class="text-[#843f00] font-semibold text-sm">{{ t("common.iosComingSoon") }}</span>
           </div>
         </div>
 
@@ -32,7 +34,7 @@
         >
           <img
               src="/google-play.png"
-              alt="Download on Google Play"
+              :alt="t('finalCta.googlePlayAlt')"
               class="w-full cursor-pointer hover:opacity-80 transition"
           />
         </a>
@@ -46,7 +48,7 @@
         >
           <img
               src="/web-badge.png"
-              alt="Open Web App"
+              :alt="t('finalCta.webAlt')"
               class="w-full cursor-pointer hover:opacity-80 transition"
           />
         </a>

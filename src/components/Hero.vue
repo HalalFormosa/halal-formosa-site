@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { t } from "@/i18n";
+</script>
+
 <template>
   <section class="max-w-7xl mx-auto px-6 py-20 md:py-32">
     <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -6,12 +10,11 @@
       <div class="text-center md:text-left">
 
         <h1 class="text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
-          <span class="text-[#d97b1a]">Halal is Easy</span> in Taiwan
+          <span class="text-[#d97b1a]">{{ t("hero.titleHighlight") }}</span> {{ t("hero.titleSuffix") }}
         </h1>
 
         <p class="text-xl text-slate-600 mb-8 leading-relaxed">
-          Discover halal-friendly food, scan ingredients, explore halal maps,
-          and travel with confidence in Taiwan.
+          {{ t("hero.description") }}
         </p>
 
         <!-- STORE BADGES -->
@@ -21,7 +24,7 @@
           <div class="relative w-40 mx-auto md:mx-0">
             <img src="/app-store.png" class="w-full opacity-80" />
             <div class="absolute inset-0 bg-white/60 backdrop-blur-xs flex items-center justify-center rounded-lg">
-              <span class="text-slate-600 font-semibold text-sm">iOS Coming Soon</span>
+              <span class="text-slate-600 font-semibold text-sm">{{ t("common.iosComingSoon") }}</span>
             </div>
           </div>
 
@@ -53,7 +56,7 @@
       <div class="flex justify-center md:justify-end">
         <img
             src="/hero-1.png"
-            alt="Halal Formosa App Mockup"
+            :alt="t('hero.mockupAlt')"
             class="max-w-[320px] md:max-w-full drop-shadow-xl"
         />
       </div>

@@ -1,10 +1,22 @@
+<script setup lang="ts">
+import { computed } from "vue";
+import { getMessage, t } from "@/i18n";
+
+type FeatureItem = {
+  title: string;
+  description: string;
+};
+
+const items = computed(() => getMessage<FeatureItem[]>("features.items", []));
+</script>
+
 <template>
   <section id="features" class="bg-slate-900 text-white py-24">
 
     <div class="max-w-4xl mx-auto text-center mb-20">
-      <h2 class="text-4xl md:text-5xl font-bold">Core Features</h2>
+      <h2 class="text-4xl md:text-5xl font-bold">{{ t("features.title") }}</h2>
       <p class="text-slate-300 mt-4">
-        Designed to make every Muslim's experience in Taiwan easier and stress-free
+        {{ t("features.subtitle") }}
       </p>
     </div>
 
@@ -20,9 +32,9 @@
             class="w-full max-w-[500px] mx-auto drop-shadow-xl"
         />
         <div class="text-center md:text-left md:ml-4">
-          <h3 class="text-3xl font-semibold mb-3">Ingredient Analysis</h3>
+          <h3 class="text-3xl font-semibold mb-3">{{ items[0]?.title }}</h3>
           <p class="text-slate-300 text-lg">
-            Scan and detect questionable, suspicious, or halal-friendly ingredients instantly.
+            {{ items[0]?.description }}
           </p>
         </div>
       </div>
@@ -38,9 +50,9 @@
             class="w-full max-w-[500px] mx-auto drop-shadow-xl"
         />
         <div class="text-center md:text-right md:mr-4">
-          <h3 class="text-3xl font-semibold mb-3">Product Search</h3>
+          <h3 class="text-3xl font-semibold mb-3">{{ items[1]?.title }}</h3>
           <p class="text-slate-300 text-lg">
-            Discover thousands of Muslim-friendly products across Taiwan.
+            {{ items[1]?.description }}
           </p>
         </div>
       </div>
@@ -56,9 +68,9 @@
             class="w-full max-w-[500px] mx-auto drop-shadow-xl"
         />
         <div class="text-center md:text-left md:ml-4">
-          <h3 class="text-3xl font-semibold mb-3">Halal Maps</h3>
+          <h3 class="text-3xl font-semibold mb-3">{{ items[2]?.title }}</h3>
           <p class="text-slate-300 text-lg">
-            Explore halal restaurants, shops, and mosques anywhere in Taiwan.
+            {{ items[2]?.description }}
           </p>
         </div>
       </div>
@@ -74,9 +86,9 @@
             class="w-full max-w-[500px] mx-auto drop-shadow-xl"
         />
         <div class="text-center md:text-right md:mr-4">
-          <h3 class="text-3xl font-semibold mb-3">Community Driven</h3>
+          <h3 class="text-3xl font-semibold mb-3">{{ items[3]?.title }}</h3>
           <p class="text-slate-300 text-lg">
-            Powered by real users contributing halal insights every day.
+            {{ items[3]?.description }}
           </p>
         </div>
       </div>
