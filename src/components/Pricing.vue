@@ -11,89 +11,89 @@ import PricingCard from '@/components/PricingCard.vue'
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
         <!-- Free -->
         <PricingCard
-            title="Free"
-            subtitle="Start exploring Taiwan"
-            price="NT$0"
-            :features="[
+          title="Free"
+          subtitle="Start exploring Taiwan"
+          price="NT$0"
+          :features="[
             'Halal Map Access',
             'Basic Ingredient Scanning',
-            '10 Scans Daily'
+            '10 Scans Daily',
+            'Collections (up to 10 items total)'
           ]"
-            :disabled-features="[
+          :disabled-features="[
             'Unlimited Scans',
-            'Smart “For You” Feed',
+            'Unlimited Collection Items',
+            'Smart For You Feed',
             'No Ads'
           ]"
-            variant="free"
+          variant="free"
         />
 
         <!-- Weekly -->
         <PricingCard
-            title="Pro Weekly"
-            subtitle="Short trips & visitors"
-            price="NT$39"
-            period="week"
-            :features="[
+          title="Pro Weekly"
+          subtitle="Short trips & visitors"
+          price="NT$39"
+          period="week"
+          :features="[
             'Everything in Free',
-            '🤖 AI Ingredient Explanation',
-            'Smart “For You” Feed',
+            'AI Ingredient Explanation',
+            'Smart For You Feed',
             'No Ads',
+            'Unlimited Collection Items',
             'Unlimited Scans',
             'Priority Support 24/7'
           ]"
-
-            variant="weekly"
+          variant="weekly"
         />
 
         <!-- Monthly -->
         <PricingCard
-            title="Pro Monthly"
-            subtitle="Most flexible for frequent visits"
-            price="NT$99"
-            period="month"
-            :features="[
+          title="Pro Monthly"
+          subtitle="Most flexible for frequent visits"
+          price="NT$99"
+          period="month"
+          :features="[
             'Everything in Free',
-            '🤖 AI Ingredient Explanation',
-            'Smart “For You” Feed',
+            'AI Ingredient Explanation',
+            'Smart For You Feed',
             'No Ads',
+            'Unlimited Collection Items',
             'Unlimited Scans',
             'Priority Support 24/7'
           ]"
-            variant="monthly"
+          variant="monthly"
         />
 
         <!-- Annual (Best Value) -->
         <PricingCard
-            title="Pro Annual"
-            subtitle="Best for Muslims living in Taiwan"
-            price="NT$699"
-            period="year"
-            badge="Best Value"
-            highlight
-            :features="[
-    'Everything in Free',
-    '🤖 AI Ingredient Explanation',
-    'Smart “For You” Feed',
-    'No Ads',
-    'Unlimited Scans',
-    'Priority Support 24/7'
-  ]"
-
-            variant="annual"
+          title="Pro Annual"
+          subtitle="Best for Muslims living in Taiwan"
+          price="NT$699"
+          period="year"
+          badge="Best Value"
+          highlight
+          :features="[
+            'Everything in Free',
+            'AI Ingredient Explanation',
+            'Smart For You Feed',
+            'No Ads',
+            'Unlimited Collection Items',
+            'Unlimited Scans',
+            'Priority Support 24/7'
+          ]"
+          variant="annual"
         >
           <p class="text-sm text-orange-100 text-center mt-4">
-            Save over <strong>40%</strong> compared to monthly · Less than NT$2 per day
+            Save over <strong>40%</strong> compared to monthly - Less than NT$2 per day
           </p>
         </PricingCard>
-
       </div>
     </div>
   </section>
 </template>
-
 
 <style scoped>
 </style>
