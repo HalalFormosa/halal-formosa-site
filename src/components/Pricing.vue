@@ -38,6 +38,7 @@ import PricingCard from '@/components/PricingCard.vue'
             period="week"
             :features="[
             'Everything in Free',
+            '🤖 AI Ingredient Explanation',
             'Smart “For You” Feed',
             'No Ads',
             'Unlimited Scans',
@@ -55,6 +56,7 @@ import PricingCard from '@/components/PricingCard.vue'
             period="month"
             :features="[
             'Everything in Free',
+            '🤖 AI Ingredient Explanation',
             'Smart “For You” Feed',
             'No Ads',
             'Unlimited Scans',
@@ -73,6 +75,7 @@ import PricingCard from '@/components/PricingCard.vue'
             highlight
             :features="[
     'Everything in Free',
+    '🤖 AI Ingredient Explanation',
     'Smart “For You” Feed',
     'No Ads',
     'Unlimited Scans',
