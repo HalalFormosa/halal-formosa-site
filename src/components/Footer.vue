@@ -107,7 +107,7 @@ const goToHomeSection = async (sectionId: string) => {
                 rel="noopener noreferrer"
                 class="hover:text-orange-400 transition underline-offset-2 hover:underline"
               >
-                YiQi Global Consulting (??????????)
+                YiQi Global Consulting (藝啟文創行銷有限公司)
               </a>
             </p>
           </div>
