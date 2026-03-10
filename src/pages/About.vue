@@ -14,7 +14,7 @@
       </p>
 
       <p class="text-slate-500 text-sm mt-3">
-        Halal Formosa 清真福爾摩沙
+        Halal Formosa | 清真福爾摩沙
       </p>
 
     </div>
