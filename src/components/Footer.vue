@@ -27,6 +27,13 @@ const goToHomeSection = async (sectionId: string) => {
             <span class="text-xl font-bold text-white">{{ t("common.brand") }}</span>
           </div>
           <p class="text-sm">{{ t("footer.tagline") }}</p>
+
+          <!-- Fazier Badge -->
+          <div class="mt-6 flex justify-center md:justify-start">
+            <a href="https://fazier.com/launches/halalformosa.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=neutral" width="120" alt="Fazier badge" class="hover:opacity-80 transition" />
+            </a>
+          </div>
         </div>
 
         <div>
