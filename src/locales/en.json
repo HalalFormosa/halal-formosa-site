@@ -620,6 +620,9 @@
     "copyLink": "Copy link",
     "copied": "Copied!"
   },
+  "socialFeed": {
+    "badge": "Community Reels"
+  },
   "recentNews": {
     "badge": "Latest News",
     "title": "Latest from Halal Formosa",
