@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRouter } from "vue-router";
 import logo from "@/assets/logo.png";
@@ -58,6 +58,7 @@ const handleLocaleChange = (event: Event) => {
         <router-link to="/about" class="text-slate-600 dark:text-slate-300 hover:text-[#d97b1a] transition">{{ t("header.nav.about") }}</router-link>
         <router-link to="/faq" class="text-slate-600 dark:text-slate-300 hover:text-[#d97b1a] transition">{{ t("header.nav.faq") }}</router-link>
         <router-link to="/contact" class="text-slate-600 dark:text-slate-300 hover:text-[#d97b1a] transition">{{ t("header.nav.contact") }}</router-link>
+        <router-link to="/news" class="text-slate-600 dark:text-slate-300 hover:text-[#d97b1a] transition">{{ t("header.nav.news") }}</router-link>
       </div>
 
       <div class="hidden md:flex items-center gap-3">
@@ -156,6 +157,10 @@ const handleLocaleChange = (event: Event) => {
 
         <router-link to="/contact" @click="mobileOpen=false" class="block w-full text-left text-slate-700 dark:text-slate-200 font-medium py-2 hover:text-[#d97b1a] transition">
           {{ t("header.nav.contact") }}
+        </router-link>
+
+        <router-link to="/news" @click="mobileOpen=false" class="block w-full text-left text-slate-700 dark:text-slate-200 font-medium py-2 hover:text-[#d97b1a] transition">
+          {{ t("header.nav.news") }}
         </router-link>
 
         <div class="flex items-center justify-between gap-3 py-2">

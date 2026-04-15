@@ -1,4 +1,4 @@
-﻿import { watch } from "vue";
+import { watch } from "vue";
 import {
   createRouter,
   createWebHistory,
@@ -13,6 +13,8 @@ import TermsOfService from "@/pages/TermsOfService.vue";
 import About from "@/pages/About.vue";
 import Contact from "@/pages/Contact.vue";
 import FAQ from "@/pages/FAQ.vue";
+import NewsListing from "@/pages/NewsListing.vue";
+import NewsArticle from "@/pages/NewsArticle.vue";
 
 const SITE_URL = "https://halalformosa.com";
 const DEFAULT_TITLE_KEY = "seo.defaults.title";
@@ -84,6 +86,24 @@ const router = createRouter({
           meta: {
             titleKey: "seo.terms.title",
             descriptionKey: "seo.terms.description",
+          },
+        },
+        {
+          path: "news",
+          name: "News",
+          component: NewsListing,
+          meta: {
+            titleKey: "seo.news.title",
+            descriptionKey: "seo.news.description",
+          },
+        },
+        {
+          path: "news/:id",
+          name: "NewsArticle",
+          component: NewsArticle,
+          meta: {
+            titleKey: "seo.newsArticle.title",
+            descriptionKey: "seo.newsArticle.description",
           },
         },
       ],

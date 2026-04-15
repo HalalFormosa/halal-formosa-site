@@ -78,6 +78,11 @@ const goToHomeSection = async (sectionId: string) => {
                 {{ t("header.nav.contact") }}
               </router-link>
             </li>
+            <li>
+              <router-link to="/news" class="hover:text-orange-400 transition">
+                {{ t("header.nav.news") }}
+              </router-link>
+            </li>
           </ul>
         </div>
 

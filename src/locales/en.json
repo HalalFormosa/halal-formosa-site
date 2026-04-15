@@ -1,4 +1,4 @@
-﻿{
+{
   "common": {
     "brand": "Halal Formosa",
     "download": "Download",
@@ -13,7 +13,8 @@
       "testimonials": "Testimonials",
       "about": "About",
       "faq": "FAQ",
-      "contact": "Contact"
+      "contact": "Contact",
+      "news": "News"
     },
     "languageLabel": "Language",
     "themeLight": "Light",
@@ -596,6 +597,33 @@
     "terms": {
       "title": "Terms of Service - Halal Formosa",
       "description": "Review Halal Formosa's Terms of Service governing the use of the halal map, ingredient scanner, and related services."
+    },
+    "news": {
+      "title": "News & Articles - Halal Formosa",
+      "description": "Read the latest news, updates, and articles from Halal Formosa about halal living in Taiwan."
+    },
+    "newsArticle": {
+      "title": "Article - Halal Formosa",
+      "description": "Read this article from Halal Formosa about halal living, community updates, and Muslim-friendly resources in Taiwan."
     }
+  },
+  "newsPage": {
+    "badge": "Latest Updates",
+    "title": "News & Articles",
+    "subtitle": "Stay informed with the latest news, announcements, and stories from the Halal Formosa community.",
+    "readMore": "Read more",
+    "backToArticles": "Back to all articles",
+    "errorLoading": "Unable to load articles. Please try again later.",
+    "noArticles": "No articles available yet. Check back soon!",
+    "minRead": "min read",
+    "shareArticle": "Share this article",
+    "copyLink": "Copy link",
+    "copied": "Copied!"
+  },
+  "recentNews": {
+    "badge": "Latest News",
+    "title": "Latest from Halal Formosa",
+    "subtitle": "Stay updated with our latest news, guides, and community stories.",
+    "viewAll": "View all articles"
   }
 }

@@ -56,6 +56,11 @@
       <SocialFeed />
     </div>
 
+    <!-- RECENT NEWS -->
+    <div data-aos="fade-up" data-aos-delay="500">
+      <RecentNews />
+    </div>
+
 
     <!-- FINAL CTA -->
     <div
@@ -81,6 +86,7 @@ import PricingSection from "@/components/Pricing.vue"
 import FinalCTASection from "@/components/FinalCTA.vue"
 import GooglePlayReviews from "@/components/GooglePlayReviews.vue";
 import SocialFeed from "@/components/SocialFeed.vue";
+import RecentNews from "@/components/RecentNews.vue";
 </script>
 
 <style scoped>

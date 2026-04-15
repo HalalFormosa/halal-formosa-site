@@ -1,4 +1,4 @@
-﻿{
+{
   "common": {
     "brand": "Halal Formosa",
     "download": "下載",
@@ -13,7 +13,8 @@
       "testimonials": "使用者評價",
       "about": "關於我們",
       "faq": "常見問題",
-      "contact": "聯絡我們"
+      "contact": "聯絡我們",
+      "news": "最新消息"
     },
     "languageLabel": "語言",
     "themeLight": "淺色",
@@ -596,6 +597,33 @@
     "terms": {
       "title": "服務條款 - Halal Formosa",
       "description": "檢視 Halal Formosa 服務條款，了解清真地圖、成分掃描與相關服務使用規範。"
+    },
+    "news": {
+      "title": "最新消息 - Halal Formosa",
+      "description": "閱讀 Halal Formosa 最新消息、公告與文章，了解台灣清真生活動態。"
+    },
+    "newsArticle": {
+      "title": "文章 - Halal Formosa",
+      "description": "閱讀來自 Halal Formosa 的文章，了解清真生活、社群動態與穆斯林友善資源。"
     }
+  },
+  "newsPage": {
+    "badge": "最新動態",
+    "title": "最新消息與文章",
+    "subtitle": "掌握 Halal Formosa 社群的最新消息、公告與故事。",
+    "readMore": "閱讀更多",
+    "backToArticles": "返回所有文章",
+    "errorLoading": "無法載入文章，請稍後再試。",
+    "noArticles": "目前尚無文章，請稍後再來查看！",
+    "minRead": "分鐘閱讀",
+    "shareArticle": "分享這篇文章",
+    "copyLink": "複製連結",
+    "copied": "已複製！"
+  },
+  "recentNews": {
+    "badge": "最新消息",
+    "title": "Halal Formosa 最新動態",
+    "subtitle": "掌握我們最新的消息、指南與社群故事。",
+    "viewAll": "查看所有文章"
   }
 }
