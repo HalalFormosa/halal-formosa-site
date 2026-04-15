@@ -75,7 +75,7 @@
           <video
             v-show="post.isPlaying"
             :ref="(el) => setVideoRef(post.id, el as HTMLVideoElement)"
-            :src="post.isPlaying ? post.video_url : undefined"
+            :src="post.isPlaying ? (post.video_url ?? undefined) : undefined"
             class="w-full h-full object-cover"
             muted
             playsinline

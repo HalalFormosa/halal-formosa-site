@@ -13,7 +13,13 @@ const items = computed(() => getMessage<FeatureItem[]>("features.items", []));
 <template>
   <section id="features" class="bg-slate-900 text-white py-24">
 
-    <div class="max-w-4xl mx-auto text-center mb-20">
+    <div class="max-w-4xl mx-auto text-center mb-20 px-6">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 text-[#d97b1a] text-sm font-medium mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7" />
+        </svg>
+        {{ t("features.badge") }}
+      </div>
       <h2 class="text-4xl md:text-5xl font-bold">{{ t("features.title") }}</h2>
       <p class="text-slate-300 mt-4">
         {{ t("features.subtitle") }}
