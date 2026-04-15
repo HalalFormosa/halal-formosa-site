@@ -9,6 +9,15 @@
       <HeroSection />
     </div>
 
+    <!-- STATS -->
+    <div
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-anchor-placement="top-bottom"
+    >
+      <AppStats />
+    </div>
+
     <!-- FEATURES -->
     <div
         data-aos="fade-up"
@@ -79,6 +88,7 @@
 
 <script setup>
 import HeroSection from "@/components/Hero.vue"
+import AppStats from "@/components/AppStats.vue"
 import FeaturesSection from "@/components/Features.vue"
 import SupportedBySection from "@/components/SupportedBySection.vue"
 import TestimonialsSection from "@/components/Testimonials.vue"

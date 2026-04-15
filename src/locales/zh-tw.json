@@ -633,5 +633,9 @@
     "title": "Halal Formosa 最新動態",
     "subtitle": "掌握我們最新的消息、指南與社群故事。",
     "viewAll": "查看所有文章"
+  },
+  "stats": {
+    "products": "清真商品",
+    "locations": "清真地點"
   }
 }

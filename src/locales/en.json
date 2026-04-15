@@ -633,5 +633,9 @@
     "title": "Latest from Halal Formosa",
     "subtitle": "Stay updated with our latest news, guides, and community stories.",
     "viewAll": "View all articles"
+  },
+  "stats": {
+    "products": "Halal Products",
+    "locations": "Halal Locations"
   }
 }
