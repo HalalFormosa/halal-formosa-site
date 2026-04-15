@@ -210,15 +210,90 @@ const copyLink = async () => {
   }
 };
 
-// Update document title when article is loaded
-watch(
-  () => article.value?.title,
-  (title) => {
-    if (title) {
-      document.title = `${title} - Halal Formosa`;
+// Inject SEO meta tags and JSON-LD structured data
+const injectSeoMeta = () => {
+  const a = article.value;
+  if (!a) return;
+
+  // Title
+  document.title = `${a.title} - Halal Formosa`;
+
+  // Helper to set/create meta tags
+  const setMeta = (attr: string, key: string, content: string) => {
+    let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
+    if (!el) {
+      el = document.createElement("meta");
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
     }
-  }
-);
+    el.setAttribute("content", content);
+  };
+
+  const plainText = a.content?.replace(/<[^>]*>/g, "").trim() ?? "";
+  const description = plainText.substring(0, 160);
+  const url = window.location.href;
+
+  // Standard meta
+  setMeta("name", "description", description);
+
+  // Open Graph
+  setMeta("property", "og:title", a.title);
+  setMeta("property", "og:description", description);
+  setMeta("property", "og:type", "article");
+  setMeta("property", "og:url", url);
+  if (a.header_image) setMeta("property", "og:image", a.header_image);
+  setMeta("property", "og:site_name", "Halal Formosa");
+
+  // Twitter Card
+  setMeta("name", "twitter:card", "summary_large_image");
+  setMeta("name", "twitter:title", a.title);
+  setMeta("name", "twitter:description", description);
+  if (a.header_image) setMeta("name", "twitter:image", a.header_image);
+
+  // Article-specific OG tags
+  setMeta("property", "article:published_time", a.created_at);
+  if (a.author_name) setMeta("property", "article:author", a.author_name);
+
+  // JSON-LD Article structured data
+  const existingLd = document.getElementById("article-jsonld");
+  if (existingLd) existingLd.remove();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.title,
+    description,
+    url,
+    datePublished: a.created_at,
+    dateModified: a.created_at,
+    image: a.header_image || undefined,
+    author: {
+      "@type": a.author_name === "AutoSEO" ? "Organization" : "Person",
+      name: a.author_name || "Halal Formosa",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Halal Formosa",
+      url: "https://halalformosa.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://halalformosa.com/logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+
+  const script = document.createElement("script");
+  script.id = "article-jsonld";
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(jsonLd);
+  document.head.appendChild(script);
+};
+
+watch(() => article.value, injectSeoMeta);
 
 onMounted(fetchArticle);
 </script>
