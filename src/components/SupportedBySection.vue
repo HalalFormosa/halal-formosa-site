@@ -5,13 +5,19 @@
       data-aos-anchor-placement="top-bottom"
   >
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <!-- Title -->
-      <h2 class="text-4xl font-bold text-center mb-4">{{ t("supportedBy.title") }}</h2>
-
-      <!-- Subtitle -->
-      <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-        {{ t("supportedBy.subtitle") }}
-      </p>
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 text-[#d97b1a] text-sm font-medium mb-4">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          {{ t("supportedBy.badge") }}
+        </div>
+        <h2 class="text-4xl font-bold mb-4">{{ t("supportedBy.title") }}</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          {{ t("supportedBy.subtitle") }}
+        </p>
+      </div>
 
       <!-- Logos -->
       <div class="mt-8 flex flex-wrap justify-center gap-10">
