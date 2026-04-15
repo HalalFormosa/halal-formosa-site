@@ -65,7 +65,7 @@
           <!-- Thumbnail (shown when not previewing) -->
           <img
             v-show="!post.isPlaying"
-            :src="post.thumbnail_url"
+            :src="post.thumbnail_url ?? undefined"
             :alt="post.caption?.substring(0, 60) || 'Social media post'"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
