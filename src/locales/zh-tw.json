@@ -31,6 +31,7 @@
     "mockupAlt": "Halal Formosa 應用程式示意圖"
   },
   "features": {
+    "badge": "功能特色",
     "title": "核心功能",
     "subtitle": "讓每位穆斯林在台灣的生活更輕鬆、更安心",
     "items": [
@@ -53,10 +54,12 @@
     ]
   },
   "supportedBy": {
+    "badge": "合作夥伴",
     "title": "支持單位",
     "subtitle": "感謝各個組織與社群支持我們的使命，與我們一同推動清真友善環境。"
   },
   "pricing": {
+    "badge": "方案價格",
     "title": "價格方案",
     "subtitle": "選擇最適合你的方案",
     "periods": {
@@ -107,6 +110,7 @@
     }
   },
   "testimonials": {
+    "badge": "使用者評價",
     "title": "深受使用者喜愛",
     "subtitle": "來自在台穆斯林的真實使用經驗，Halal Formosa 已成為他們每日依賴的工具。",
     "paginationAriaLabel": "前往評價頁面",
@@ -134,6 +138,7 @@
     ]
   },
   "googlePlayReviews": {
+    "badge": "應用評價",
     "title": "Google Play 使用者評價",
     "subtitle": "來自 Android 使用者的真實評論，他們透過 Halal Formosa 進行清真探索、成分檢查與穆斯林友善旅遊。"
   },

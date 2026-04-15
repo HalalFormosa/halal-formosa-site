@@ -31,6 +31,7 @@
     "mockupAlt": "Halal Formosa App Mockup"
   },
   "features": {
+    "badge": "Features",
     "title": "Core Features",
     "subtitle": "Designed to make every Muslim's experience in Taiwan easier and stress-free",
     "items": [
@@ -53,10 +54,12 @@
     ]
   },
   "supportedBy": {
+    "badge": "Partners",
     "title": "Supported By",
     "subtitle": "We are grateful for the support of organizations and communities who share our mission."
   },
   "pricing": {
+    "badge": "Pricing",
     "title": "Pricing",
     "subtitle": "Choose the perfect plan for your needs",
     "periods": {
@@ -107,6 +110,7 @@
     }
   },
   "testimonials": {
+    "badge": "Testimonials",
     "title": "Loved by Our Users",
     "subtitle": "Real experiences from Muslims in Taiwan who rely on Halal Formosa every day.",
     "paginationAriaLabel": "Go to testimonial page",
@@ -134,6 +138,7 @@
     ]
   },
   "googlePlayReviews": {
+    "badge": "Reviews",
     "title": "What Our Users Say on Google Play",
     "subtitle": "Real reviews from Android users who rely on Halal Formosa for halal discovery, ingredient checks, and Muslim-friendly travel in Taiwan."
   },
