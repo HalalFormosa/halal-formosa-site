@@ -20,7 +20,7 @@ const goToHomeSection = async (sectionId: string) => {
 <template>
   <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-2">
         <div>
           <div class="flex items-center gap-2 mb-4 cursor-pointer" @click="router.push('/')">
             <img :src="logo" width="80" height="80" alt="Halal Formosa Logo" class="w-10 h-10 rounded-lg shadow-sm object-contain" />
@@ -28,15 +28,7 @@ const goToHomeSection = async (sectionId: string) => {
           </div>
           <p class="text-sm">{{ t("footer.tagline") }}</p>
 
-          <!-- Launch Badges -->
-          <div class="mt-6 flex flex-wrap gap-4 items-center justify-center md:justify-start">
-            <a href="https://fazier.com/launches/halal-formosa" target="_blank" rel="noopener noreferrer">
-              <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=neutral" width="120" alt="Fazier badge" class="hover:opacity-80 transition" />
-            </a>
-            <a href="https://www.uneed.best/tool/halalformosa" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.uneed.best/EMBED3.png" alt="Launching Soon on Uneed" class="h-10 w-auto hover:opacity-80 transition" />
-            </a>
-          </div>
+
         </div>
 
         <div>
@@ -108,6 +100,19 @@ const goToHomeSection = async (sectionId: string) => {
             </a>
           </div>
         </div>
+      </div>
+ 
+      <!-- Launch Badges -->
+      <div class="flex flex-wrap gap-8 items-center justify-center mb-2 border-t border-slate-800/50 pt-2">
+        <a href="https://fazier.com/launches/halal-formosa" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+          <img src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=8434&badge_type=featured&theme=dark" width="270" alt="Fazier badge" />
+        </a>
+        <a href="https://www.uneed.best/tool/halalformosa" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+          <img src="https://www.uneed.best/EMBED3.png" alt="Uneed Embed Badge" class="h-10 w-auto" />
+        </a>
+        <a href="https://peerpush.net/p/halal-formosa" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+          <img src="https://peerpush.net/p/halal-formosa/badge.png" alt="Halal Formosa badge" class="w-[180px] md:w-[230px] h-auto" />
+        </a>
       </div>
 
       <div class="border-t border-slate-800 pt-8">
