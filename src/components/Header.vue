@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 import logo from "@/assets/logo.png";
 import { locale, setLocale, t, type SupportedLocale } from "@/i18n";
