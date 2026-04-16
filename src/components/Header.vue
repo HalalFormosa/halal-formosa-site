@@ -14,10 +14,7 @@ const localeOptions: Array<{ value: SupportedLocale; labelKey: string }> = [
   { value: "zh-tw", labelKey: "header.languages.zh-tw" },
 ];
 
-const currentLocaleLabel = computed(() => {
-  const currentOption = localeOptions.find((option) => option.value === locale.value);
-  return currentOption ? t(currentOption.labelKey) : t("header.languages.en");
-});
+
 
 const goToHomeSection = async (sectionId: string) => {
   if (router.currentRoute.value.path !== "/") {
@@ -65,19 +62,10 @@ const handleLocaleChange = (event: Event) => {
         <div class="relative group">
           <button
             type="button"
-            class="px-3 py-2 text-sm border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 inline-flex items-center gap-2 hover:border-[#d97b1a] hover:text-[#d97b1a] transition"
+            class="p-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 inline-flex items-center hover:border-[#d97b1a] hover:text-[#d97b1a] transition"
             :aria-label="t('header.languageLabel')"
           >
-            <Languages class="w-4 h-4" />
-            <span>{{ currentLocaleLabel }}</span>
-            <svg
-              class="w-4 h-4 text-slate-500 group-hover:text-[#d97b1a] transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
+            <Languages class="w-5 h-5" />
           </button>
 
           <div
@@ -101,17 +89,16 @@ const handleLocaleChange = (event: Event) => {
 
         <button
           type="button"
-          @click="toggleTheme"
-          class="px-3 py-2 text-sm border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 inline-flex items-center gap-2 hover:border-[#d97b1a] hover:text-[#d97b1a] transition"
+          @click="toggleTheme($event)"
+          class="p-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 inline-flex items-center hover:border-[#d97b1a] hover:text-[#d97b1a] transition"
           :aria-label="isDarkTheme ? t('header.themeLight') : t('header.themeDark')"
         >
-          <svg v-if="isDarkTheme" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg v-if="isDarkTheme" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.36 6.36-.7-.7M6.34 6.34l-.7-.7m12.72 0-.7.7M6.34 17.66l-.7.7M12 7a5 5 0 100 10 5 5 0 000-10z" />
           </svg>
-          <svg v-else class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
           </svg>
-          {{ isDarkTheme ? t("header.themeLight") : t("header.themeDark") }}
         </button>
 
         <button
@@ -177,7 +164,7 @@ const handleLocaleChange = (event: Event) => {
 
         <button
           type="button"
-          @click="toggleTheme"
+          @click="toggleTheme($event)"
           class="w-full border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 py-2 rounded-lg font-medium inline-flex items-center justify-center gap-2"
         >
           <svg v-if="isDarkTheme" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
