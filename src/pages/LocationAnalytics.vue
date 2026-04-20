@@ -10,7 +10,6 @@ import {
   GiftIcon,
   ArrowLeftIcon,
   ChurchIcon,
-  ShoppingBagIcon,
   TreesIcon,
   BeefIcon,
   ChefHatIcon,
