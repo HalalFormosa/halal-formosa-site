@@ -654,11 +654,13 @@
     "halal": "Halal",
     "muslimFriendly": "Muslim Friendly",
     "syubhah": "Syubhah (Doubtful)",
-    "haram": "Haram (Non-Halal)"
+    "haram": "Haram (Non-Halal)",
+    "seeAll": "See All Products"
   },
   "locationAnalytics": {
     "title": "Location Analytics",
     "subtitle": "Comprehensive breakdown of verified locations categorized by the Halal Formosa ecosystem.",
+    "seeAll": "See All Locations",
     "types": {
       "Prayer Room": "Prayer Room",
       "Mosque": "Mosque",

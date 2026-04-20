@@ -12,6 +12,7 @@
     </main>
 
     <FooterSection />
+    <ScrollToTop />
   </div>
 </template>
 
@@ -19,4 +20,5 @@
 import { Analytics } from "@vercel/analytics/vue";
 import HeaderSection from "@/components/Header.vue";
 import FooterSection from "@/components/Footer.vue";
+import ScrollToTop from "@/components/ScrollToTop.vue";
 </script>

@@ -107,7 +107,7 @@
                   class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider pointer-events-auto hover:opacity-80 transition"
                   :class="platform === 'instagram'
                     ? 'bg-gradient-to-r from-pink-500 to-orange-400 text-white'
-                    : 'bg-white text-black'"
+                    : 'bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white'"
                   @click.stop
                 >
                   {{ platform === 'instagram' ? 'Reel' : 'TikTok' }}

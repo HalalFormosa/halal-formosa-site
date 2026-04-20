@@ -654,11 +654,13 @@
     "halal": "清真認證",
     "muslimFriendly": "穆斯林友善",
     "syubhah": "成分疑慮 (Syubhah)",
-    "haram": "非清真 (Haram)"
+    "haram": "非清真 (Haram)",
+    "seeAll": "查看所有商品"
   },
   "locationAnalytics": {
     "title": "地點分析報告",
     "subtitle": "Halal Formosa 生態系中已驗證地點的功能類別詳細分布狀況。",
+    "seeAll": "查看所有地點",
     "types": {
       "Prayer Room": "祈禱室",
       "Mosque": "清真寺",

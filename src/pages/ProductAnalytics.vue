@@ -7,7 +7,8 @@ import {
   UserCheckIcon, 
   AlertTriangleIcon, 
   XCircleIcon,
-  ArrowLeftIcon
+  ArrowLeftIcon,
+  ExternalLinkIcon
 } from "lucide-vue-next";
 
 type Stats = {
@@ -128,6 +129,18 @@ onMounted(async () => {
       <!-- LOADING STATE -->
       <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div v-for="i in 4" :key="i" class="bg-white dark:bg-slate-900/50 p-8 rounded-3xl shadow-sm animate-pulse h-32"></div>
+      </div>
+
+      <!-- SEE ALL BUTTON -->
+      <div class="mt-12 text-center">
+        <a 
+          href="https://app.halalformosa.com/search" 
+          target="_blank"
+          class="inline-flex items-center px-8 py-4 bg-[#d97b1a] hover:bg-[#c26a15] text-white font-semibold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          {{ t('analytics.seeAll') }}
+          <ExternalLinkIcon class="w-5 h-5 ml-2" />
+        </a>
       </div>
 
     </div>
