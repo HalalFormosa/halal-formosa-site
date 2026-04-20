@@ -2,6 +2,7 @@
   "common": {
     "brand": "Halal Formosa",
     "download": "下載",
+    "back": "返回",
     "iosComingSoon": "iOS 即將推出",
     "instagram": "Instagram",
     "tiktok": "TikTok"
@@ -610,6 +611,14 @@
     "newsArticle": {
       "title": "文章 - Halal Formosa",
       "description": "閱讀來自 Halal Formosa 的文章，了解清真生活、社群動態與穆斯林友善資源。"
+    },
+    "productAnalytics": {
+      "title": "商品分析 - Halal Formosa",
+      "description": "查看經 Halal Formosa 分析的清真、穆斯林友善、疑慮及非清真商品的比例分布。"
+    },
+    "locationAnalytics": {
+      "title": "地點分析 - Halal Formosa",
+      "description": "查看台灣經驗證的清真寺、餐廳與禮拜場所的類別分布。"
     }
   },
   "newsPage": {
@@ -635,7 +644,34 @@
     "viewAll": "查看所有文章"
   },
   "stats": {
-    "products": "清真商品",
-    "locations": "清真地點"
+    "products": "已分析商品",
+    "locations": "已驗證地點",
+    "clickDetails": "點擊查看詳情"
+  },
+  "analytics": {
+    "title": "商品分析報告",
+    "subtitle": "Halal Formosa 生態系中已分析與驗證商品的詳細分布狀況。",
+    "halal": "清真認證",
+    "muslimFriendly": "穆斯林友善",
+    "syubhah": "成分疑慮 (Syubhah)",
+    "haram": "非清真 (Haram)"
+  },
+  "locationAnalytics": {
+    "title": "地點分析報告",
+    "subtitle": "Halal Formosa 生態系中已驗證地點的功能類別詳細分布狀況。",
+    "types": {
+      "Prayer Room": "祈禱室",
+      "Mosque": "清真寺",
+      "Halal Kitchen": "清真廚房",
+      "Muslim-friendly Restaurant": "穆斯林友善餐廳",
+      "Butcher Shop": "肉舖",
+      "Muslim-friendly Environment": "穆斯林友善環境",
+      "Muslim-friendly Stall": "穆斯林友善攤位",
+      "Muslim-friendly Accomodation": "穆斯林友善住宿",
+      "Muslim-friendly Souvenirs": "穆斯林友善伴手禮",
+      "Halal Restaurant": "清真餐廳",
+      "Vegan Restaurant": "全素餐廳",
+      "Halal Stall": "清真攤位"
+    }
   }
 }

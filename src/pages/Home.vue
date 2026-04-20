@@ -11,9 +11,11 @@
 
     <!-- STATS -->
     <div
+        id="stats"
         data-aos="fade-up"
         data-aos-delay="100"
         data-aos-anchor-placement="top-bottom"
+        class="scroll-mt-32"
     >
       <AppStats />
     </div>

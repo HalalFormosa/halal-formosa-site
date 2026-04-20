@@ -107,9 +107,6 @@ const goToHomeSection = async (sectionId: string) => {
         <a href="https://fazier.com/launches/halal-formosa" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
           <img src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=8434&badge_type=featured&theme=dark" width="270" alt="Fazier badge" />
         </a>
-        <a href="https://www.uneed.best/tool/halalformosa" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
-          <img src="https://www.uneed.best/EMBED3.png" alt="Uneed Embed Badge" class="h-10 w-auto" />
-        </a>
         <a href="https://peerpush.net/p/halal-formosa" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
           <img src="https://peerpush.net/p/halal-formosa/badge.png" alt="Halal Formosa badge" class="w-[180px] md:w-[230px] h-auto" />
         </a>

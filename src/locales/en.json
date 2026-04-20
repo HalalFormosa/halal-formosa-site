@@ -2,6 +2,7 @@
   "common": {
     "brand": "Halal Formosa",
     "download": "Download",
+    "back": "Back",
     "iosComingSoon": "iOS Coming Soon",
     "instagram": "Instagram",
     "tiktok": "TikTok"
@@ -610,6 +611,14 @@
     "newsArticle": {
       "title": "Article - Halal Formosa",
       "description": "Read this article from Halal Formosa about halal living, community updates, and Muslim-friendly resources in Taiwan."
+    },
+    "productAnalytics": {
+      "title": "Product Analytics - Halal Formosa",
+      "description": "View the distribution of halal, Muslim-friendly, syubhah, and haram products analyzed by Halal Formosa."
+    },
+    "locationAnalytics": {
+      "title": "Location Analytics - Halal Formosa",
+      "description": "View the distribution of verified mosques, restaurants, and prayer places in Taiwan."
     }
   },
   "newsPage": {
@@ -635,7 +644,34 @@
     "viewAll": "View all articles"
   },
   "stats": {
-    "products": "Halal Products",
-    "locations": "Halal Locations"
+    "products": "Analyzed Products",
+    "locations": "Verified Locations",
+    "clickDetails": "Click for details"
+  },
+  "analytics": {
+    "title": "Product Analytics",
+    "subtitle": "Comprehensive breakdown of products analyzed and verified by the Halal Formosa ecosystem.",
+    "halal": "Halal",
+    "muslimFriendly": "Muslim Friendly",
+    "syubhah": "Syubhah (Doubtful)",
+    "haram": "Haram (Non-Halal)"
+  },
+  "locationAnalytics": {
+    "title": "Location Analytics",
+    "subtitle": "Comprehensive breakdown of verified locations categorized by the Halal Formosa ecosystem.",
+    "types": {
+      "Prayer Room": "Prayer Room",
+      "Mosque": "Mosque",
+      "Halal Kitchen": "Halal Kitchen",
+      "Muslim-friendly Restaurant": "Muslim-friendly Restaurant",
+      "Butcher Shop": "Butcher Shop",
+      "Muslim-friendly Environment": "Muslim-friendly Environment",
+      "Muslim-friendly Stall": "Muslim-friendly Stall",
+      "Muslim-friendly Accomodation": "Muslim-friendly Accomodation",
+      "Muslim-friendly Souvenirs": "Muslim-friendly Souvenirs",
+      "Halal Restaurant": "Halal Restaurant",
+      "Vegan Restaurant": "Vegan Restaurant",
+      "Halal Stall": "Halal Stall"
+    }
   }
 }

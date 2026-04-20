@@ -11,13 +11,16 @@ onMounted(async () => {
   try {
     const { count: pCount } = await supabase
       .from('products')
-      .select('*', { count: 'exact', head: true });
+      .select('*', { count: 'exact', head: true })
+      .eq('approved', true)
+      .not('status', 'is', null);
       
     if (pCount !== null) productsCount.value = pCount;
 
     const { count: lCount } = await supabase
       .from('locations')
-      .select('*', { count: 'exact', head: true });
+      .select('*', { count: 'exact', head: true })
+      .eq('approved', true);
       
     if (lCount !== null) locationsCount.value = lCount;
   } catch (e) {
@@ -28,31 +31,43 @@ onMounted(async () => {
 
 <template>
   <section class="max-w-7xl mx-auto px-6 pb-20">
-    <div class="grid grid-cols-2 md:grid-cols-2 gap-6 bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-12 py-12">
       
-      <!-- PRODUCTS STAT -->
-      <div class="flex flex-col items-center justify-center text-center">
-        <div class="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center mb-4">
-          <StoreIcon class="w-6 h-6 text-[#d97b1a]" />
+      <!-- PRODUCTS STAT (Clickable) -->
+      <router-link 
+        to="/analytics/products"
+        class="flex flex-col items-center justify-center text-center group transition-all duration-300 hover:scale-105"
+      >
+        <div class="mb-6 transition-all duration-300">
+          <StoreIcon class="w-16 h-16 text-[#d97b1a] dark:text-orange-400 group-hover:scale-110 transition-transform" />
         </div>
-        <div class="text-4xl font-bold text-slate-900 mb-2 mt-2">
-          <span v-if="productsCount !== null">{{ productsCount }}+</span>
-          <span v-else class="animate-pulse bg-slate-200 h-10 w-24 rounded inline-block"></span>
+        <div class="text-5xl font-extrabold text-slate-900 dark:text-white mb-2">
+          <span v-if="productsCount !== null">{{ productsCount }}</span>
+          <span v-else class="animate-pulse bg-slate-200 dark:bg-slate-700 h-12 w-32 rounded inline-block"></span>
         </div>
-        <p class="text-slate-500 font-medium">{{ t('stats.products') }}</p>
-      </div>
+        <p class="text-slate-500 dark:text-slate-400 font-semibold text-lg">{{ t('stats.products') }}</p>
+        <p class="text-xs text-[#d97b1a] dark:text-orange-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
+          {{ t('stats.clickDetails') }}
+        </p>
+      </router-link>
 
-      <!-- LOCATIONS STAT -->
-      <div class="flex flex-col items-center justify-center text-center">
-        <div class="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center mb-4">
-          <MapPinIcon class="w-6 h-6 text-[#d97b1a]" />
+      <!-- LOCATIONS STAT (Clickable) -->
+      <router-link 
+        to="/analytics/locations"
+        class="flex flex-col items-center justify-center text-center group transition-all duration-300 hover:scale-105"
+      >
+        <div class="mb-6 transition-all duration-300">
+          <MapPinIcon class="w-16 h-16 text-slate-600 dark:text-[#d97b1a] transition-transform group-hover:scale-110" />
         </div>
-        <div class="text-4xl font-bold text-slate-900 mb-2 mt-2">
-          <span v-if="locationsCount !== null">{{ locationsCount }}+</span>
-          <span v-else class="animate-pulse bg-slate-200 h-10 w-24 rounded inline-block"></span>
+        <div class="text-5xl font-extrabold text-slate-900 dark:text-white mb-2">
+          <span v-if="locationsCount !== null">{{ locationsCount }}</span>
+          <span v-else class="animate-pulse bg-slate-200 dark:bg-slate-700 h-12 w-32 rounded inline-block"></span>
         </div>
-        <p class="text-slate-500 font-medium">{{ t('stats.locations') }}</p>
-      </div>
+        <p class="text-slate-500 dark:text-slate-400 font-semibold text-lg">{{ t('stats.locations') }}</p>
+        <p class="text-xs text-[#d97b1a] dark:text-orange-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
+          {{ t('stats.clickDetails') }}
+        </p>
+      </router-link>
 
     </div>
   </section>

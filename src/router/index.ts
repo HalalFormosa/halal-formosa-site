@@ -15,6 +15,8 @@ import Contact from "@/pages/Contact.vue";
 import FAQ from "@/pages/FAQ.vue";
 import NewsListing from "@/pages/NewsListing.vue";
 import NewsArticle from "@/pages/NewsArticle.vue";
+import ProductAnalytics from "@/pages/ProductAnalytics.vue";
+import LocationAnalytics from "@/pages/LocationAnalytics.vue";
 
 const SITE_URL = "https://halalformosa.com";
 const DEFAULT_TITLE_KEY = "seo.defaults.title";
@@ -104,6 +106,24 @@ const router = createRouter({
           meta: {
             titleKey: "seo.newsArticle.title",
             descriptionKey: "seo.newsArticle.description",
+          },
+        },
+        {
+          path: "analytics/products",
+          name: "ProductAnalytics",
+          component: ProductAnalytics,
+          meta: {
+            titleKey: "seo.productAnalytics.title",
+            descriptionKey: "seo.productAnalytics.description",
+          },
+        },
+        {
+          path: "analytics/locations",
+          name: "LocationAnalytics",
+          component: LocationAnalytics,
+          meta: {
+            titleKey: "seo.locationAnalytics.title",
+            descriptionKey: "seo.locationAnalytics.description",
           },
         },
       ],
