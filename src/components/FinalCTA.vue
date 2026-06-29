@@ -13,17 +13,19 @@ import { t } from "@/i18n";
 
       <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
 
-        <!-- APP STORE (COMING SOON) -->
-        <div class="relative w-40">
+        <!-- APP STORE -->
+        <a
+            href="https://apps.apple.com/tw/app/halal-formosa-halal-taiwan/id6771660859"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-40 block"
+        >
           <img
               src="/app-store.png"
               :alt="t('finalCta.appStoreAlt')"
-              class="w-full opacity-40"
+              class="w-full cursor-pointer hover:opacity-80 transition"
           />
-          <div class="absolute inset-0 bg-white/50 backdrop-blur-xs flex items-center justify-center rounded-lg">
-            <span class="text-[#843f00] font-semibold text-sm">{{ t("common.iosComingSoon") }}</span>
-          </div>
-        </div>
+        </a>
 
         <!-- GOOGLE PLAY (LIVE DOWNLOAD) -->
         <a

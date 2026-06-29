@@ -20,7 +20,7 @@ The website is built with:
 - 📱 Mobile-friendly responsive layout
 - 📄 Privacy Policy & Terms of Service pages
 - 📬 Working contact form (FormSubmit)
-- 🔗 Links to App Store / Play Store (Android live, iOS coming soon)
+- 🔗 Links to App Store / Play Store (Android and iOS live)
 
 ---
 
