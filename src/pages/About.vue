@@ -175,7 +175,7 @@
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 mt-4 text-sm text-[#d97b1a] font-medium hover:underline"
           >
-            <ion-icon name="logo-instagram" />
+            <Instagram class="w-4 h-4" />
             <span>{{ member.instagram }}</span>
           </a>
 
@@ -230,6 +230,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Instagram } from 'lucide-vue-next'
 
 type TeamMember = {
   name: string
