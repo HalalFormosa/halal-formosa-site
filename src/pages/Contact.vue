@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <section class="max-w-4xl mx-auto px-6 py-24">
     <h1 class="text-4xl font-bold text-slate-900 text-center mb-6">{{ t("contactPage.title") }}</h1>
 
@@ -23,7 +23,7 @@
           rel="noopener"
           class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold hover:opacity-90 transition"
         >
-          <ion-icon name="logo-instagram" class="text-xl"></ion-icon>
+          <Instagram class="w-5 h-5" />
           {{ t("common.instagram") }}
         </a>
 
@@ -33,7 +33,9 @@
           rel="noopener"
           class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-black text-white font-semibold hover:opacity-90 transition"
         >
-          <ion-icon name="logo-tiktok" class="text-xl"></ion-icon>
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.95.89 2.25 1.45 3.58 1.52.01 1.25.01 2.5 0 3.75-.98-.02-1.96-.28-2.83-.75-.82-.55-1.48-1.33-1.89-2.24-.03 2.11-.02 4.22-.03 6.33-.07 1.83-.56 3.69-1.63 5.17-1.36 1.76-3.64 2.82-5.87 2.94-2.12.07-4.32-.57-5.88-2.04-1.84-1.83-2.51-4.71-1.74-7.18.59-1.86 2.05-3.41 3.88-4.08 1.44-.5 3.04-.45 4.45.14.01 1.34.01 2.68.01 4.02-.75-.43-1.63-.61-2.49-.49-1.04.1-2.03.73-2.54 1.66-.6 1.15-.49 2.69.34 3.7 1.01 1.1 2.76 1.35 3.98.53.9-.66 1.41-1.76 1.43-2.88.02-3.67.01-7.35.01-11.02z" />
+          </svg>
           {{ t("common.tiktok") }}
         </a>
       </div>
@@ -119,6 +121,7 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { t } from "@/i18n";
+import { Instagram } from "lucide-vue-next";
 
 const route = useRoute();
 const origin = window.location.origin;

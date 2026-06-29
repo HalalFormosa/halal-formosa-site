@@ -175,7 +175,7 @@
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 mt-4 text-sm text-[#d97b1a] font-medium hover:underline"
           >
-            <ion-icon name="logo-instagram" />
+            <Instagram class="w-4 h-4" />
             <span>{{ member.instagram }}</span>
           </a>
 
@@ -230,6 +230,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Instagram } from 'lucide-vue-next'
 
 type TeamMember = {
   name: string
@@ -340,6 +341,17 @@ const timeline = [
     },
     extra:
         '. Under this collaboration, YiQi Global Consulting supports platform publishing, registration, and operational requirements in Taiwan, enabling formal business activities and broader institutional collaboration.',
+  },
+  {
+    date: '29 June 2026',
+    description:
+        'The Halal Formosa mobile application was officially released on the',
+    link: {
+      label: 'Apple App Store',
+      url: 'https://apps.apple.com/tw/app/halal-formosa-halal-taiwan/id6771660859',
+    },
+    extra:
+        ', making the ecosystem fully available for both iOS and Android users.',
   },
 ]
 

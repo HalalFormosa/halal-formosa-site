@@ -20,13 +20,15 @@ import { t } from "@/i18n";
         <!-- STORE BADGES -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
 
-          <!-- APP STORE DISABLED -->
-          <div class="relative w-40 mx-auto md:mx-0">
-            <img src="/app-store.png" class="w-full opacity-80" />
-            <div class="absolute inset-0 bg-white/60 backdrop-blur-xs flex items-center justify-center rounded-lg">
-              <span class="text-slate-600 font-semibold text-sm">{{ t("common.iosComingSoon") }}</span>
-            </div>
-          </div>
+          <!-- APP STORE -->
+          <a
+              href="https://apps.apple.com/tw/app/halal-formosa-halal-taiwan/id6771660859"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-40 block mx-auto md:mx-0"
+          >
+            <img src="/app-store.png" class="w-full cursor-pointer hover:opacity-80 transition" />
+          </a>
 
           <!-- GOOGLE PLAY -->
           <a
