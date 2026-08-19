@@ -140,6 +140,13 @@ const supporters = [
     url: "https://www.youtube.com/@nihaoindonesia8855",
     active: false
   },
+  {
+    name: "Dakwah Halal Foundation",
+    logo: "/supporters/dakwah-halal-foundation.png",
+    scale: "scale-85",
+    url: "https://halal.org.tw/",
+    active: true
+  },
 ]
 </script>
 
