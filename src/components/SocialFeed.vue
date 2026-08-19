@@ -43,6 +43,17 @@
           </svg>
           {{ t("common.tiktok") }}
         </a>
+        <a
+          href="https://www.youtube.com/@HalalFormosa"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-600 text-white font-semibold hover:opacity-90 transition shadow-md"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          {{ t("common.youtube") }}
+        </a>
       </div>
 
       <!-- Loading State -->
@@ -107,10 +118,12 @@
                   class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider pointer-events-auto hover:opacity-80 transition"
                   :class="platform === 'instagram'
                     ? 'bg-gradient-to-r from-pink-500 to-orange-400 text-white'
-                    : 'bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white'"
+                    : platform === 'youtube'
+                      ? 'bg-red-600 text-white'
+                      : 'bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white'"
                   @click.stop
                 >
-                  {{ platform === 'instagram' ? 'Reel' : 'TikTok' }}
+                  {{ platform === 'instagram' ? 'Reel' : platform === 'youtube' ? 'YouTube' : 'TikTok' }}
                 </a>
               </template>
               <span class="text-white/60 text-[11px]">{{ formatDate(post.timestamp) }}</span>
@@ -150,7 +163,7 @@ type MergedPost = {
   thumbnail_url: string | null;
   video_url: string | null;
   timestamp: string;
-  platforms: ("instagram" | "tiktok")[];
+  platforms: ("instagram" | "tiktok" | "youtube")[];
   links: Record<string, string>;
   isPlaying: boolean;
 };
@@ -194,7 +207,7 @@ function isSameContent(a: RawPost, b: RawPost): boolean {
   return Math.abs(dateA - dateB) < threeDays;
 }
 
-function mergePosts(igPosts: RawPost[], ttPosts: RawPost[]): MergedPost[] {
+function mergePosts(igPosts: RawPost[], ttPosts: RawPost[], ytPosts: RawPost[] = []): MergedPost[] {
   const results: MergedPost[] = [];
   const usedTiktok = new Set<string>();
 
@@ -249,6 +262,20 @@ function mergePosts(igPosts: RawPost[], ttPosts: RawPost[]): MergedPost[] {
     }
   }
 
+  // YouTube content (long-form) isn't cross-matched with IG/TikTok reels — add as-is
+  for (const yt of ytPosts) {
+    results.push({
+      id: yt.id,
+      caption: yt.caption,
+      thumbnail_url: yt.thumbnail_url,
+      video_url: yt.video_url,
+      timestamp: yt.timestamp,
+      platforms: ["youtube"],
+      links: { youtube: yt.permalink },
+      isPlaying: false,
+    });
+  }
+
   // Sort by date, take latest 8
   return results
     .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
@@ -257,7 +284,7 @@ function mergePosts(igPosts: RawPost[], ttPosts: RawPost[]): MergedPost[] {
 
 const fetchPosts = async () => {
   try {
-    const [igRes, ttRes] = await Promise.all([
+    const [igRes, ttRes, ytRes] = await Promise.all([
       supabase
         .from("instagram_posts")
         .select("id, caption, media_type, media_url, thumbnail_url, permalink, username, timestamp, video_url")
@@ -268,9 +295,14 @@ const fetchPosts = async () => {
         .select("id, caption, media_type, media_url, thumbnail_url, permalink, username, timestamp, video_url")
         .order("timestamp", { ascending: false })
         .limit(12),
+      supabase
+        .from("youtube_posts")
+        .select("id, caption, media_type, media_url, thumbnail_url, permalink, username, timestamp, video_url")
+        .order("timestamp", { ascending: false })
+        .limit(12),
     ]);
 
-    mergedPosts.value = mergePosts(igRes.data ?? [], ttRes.data ?? []);
+    mergedPosts.value = mergePosts(igRes.data ?? [], ttRes.data ?? [], ytRes.data ?? []);
   } catch (e) {
     console.error("Failed to fetch social posts:", e);
   } finally {
@@ -306,8 +338,8 @@ const stopVideoPreview = (post: MergedPost) => {
 };
 
 const openPost = (post: MergedPost) => {
-  // Prefer Instagram link, fallback to TikTok
-  const url = post.links.instagram || post.links.tiktok;
+  // Prefer Instagram link, fallback to TikTok, then YouTube
+  const url = post.links.instagram || post.links.tiktok || post.links.youtube;
   if (url) window.open(url, "_blank", "noopener");
 };
 
