@@ -147,6 +147,13 @@ const supporters = [
     url: "https://halal.org.tw/",
     active: true
   },
+  {
+    name: "Kedai Sri Rahayu",
+    logo: "/supporters/kedai-sri-rahayu.png",
+    scale: "scale-85",
+    url: "https://www.facebook.com/sri.rahayu.cks/",
+    active: true
+  },
 ]
 </script>
 
