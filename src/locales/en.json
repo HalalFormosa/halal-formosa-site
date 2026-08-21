@@ -164,6 +164,17 @@
             "Top Search Terms",
             "Weekly Email + CSV Reports"
           ]
+        },
+        "custom": {
+          "title": "Custom",
+          "subtitle": "For large businesses & franchises",
+          "price": "Custom",
+          "features": [
+            "Everything in Gold",
+            "Dedicated Account Manager",
+            "Custom Integration & Reporting"
+          ],
+          "cta": "Contact Us"
         }
       }
     }

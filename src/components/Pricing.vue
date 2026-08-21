@@ -30,6 +30,9 @@ const silverDisabledFeatures = computed(() =>
 const goldFeatures = computed(() =>
   getMessage<string[]>("pricing.business.plans.gold.features", [])
 );
+const customFeatures = computed(() =>
+  getMessage<string[]>("pricing.business.plans.custom.features", [])
+);
 </script>
 
 <template>
@@ -122,7 +125,7 @@ const goldFeatures = computed(() =>
       </div>
 
       <!-- Business plans -->
-      <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div v-else class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <!-- Bronze -->
         <PricingCard
           :title="t('pricing.business.plans.bronze.title')"
@@ -155,6 +158,17 @@ const goldFeatures = computed(() =>
           :period="t('pricing.periods.mo')"
           :features="goldFeatures"
           variant="gold"
+        />
+
+        <!-- Custom (Contact Us) -->
+        <PricingCard
+          :title="t('pricing.business.plans.custom.title')"
+          :subtitle="t('pricing.business.plans.custom.subtitle')"
+          :price="t('pricing.business.plans.custom.price')"
+          :features="customFeatures"
+          :cta-label="t('pricing.business.plans.custom.cta')"
+          cta-href="/contact"
+          variant="custom"
         />
       </div>
     </div>

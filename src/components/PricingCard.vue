@@ -7,9 +7,10 @@ defineProps<{
   features: string[]
   disabledFeatures?: string[]
   ctaLabel?: string
+  ctaHref?: string
   highlight?: boolean
   badge?: string
-  variant?: 'free' | 'weekly' | 'monthly' | 'annual' | 'bronze' | 'silver' | 'gold'
+  variant?: 'free' | 'weekly' | 'monthly' | 'annual' | 'bronze' | 'silver' | 'gold' | 'custom'
 }>()
 </script>
 
@@ -25,7 +26,8 @@ defineProps<{
       variant === 'monthly' && 'border-orange-300',
       variant === 'bronze' && 'border-orange-200',
       variant === 'silver' && 'border-slate-300',
-      variant === 'gold' && 'border-amber-400'
+      variant === 'gold' && 'border-amber-400',
+      variant === 'custom' && 'border-2 border-dashed border-slate-300'
     ]"
   >
     <!-- Badge -->
@@ -74,8 +76,20 @@ defineProps<{
     </ul>
 
     <!-- CTA -->
+    <RouterLink
+        v-if="ctaLabel && ctaHref"
+        :to="ctaHref"
+        :class="[
+        'block w-full py-3 rounded-lg font-bold transition text-center',
+        highlight
+          ? 'bg-white text-[#d97b1a]'
+          : 'border border-[#d97b1a] text-[#d97b1a] hover:bg-orange-50'
+      ]"
+    >
+      {{ ctaLabel }}
+    </RouterLink>
     <button
-        v-if="ctaLabel"
+        v-else-if="ctaLabel"
         :class="[
         'w-full py-3 rounded-lg font-bold transition',
         highlight
