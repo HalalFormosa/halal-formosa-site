@@ -9,20 +9,23 @@ defineProps<{
   ctaLabel?: string
   highlight?: boolean
   badge?: string
-  variant?: 'free' | 'weekly' | 'monthly' | 'annual'
+  variant?: 'free' | 'weekly' | 'monthly' | 'annual' | 'bronze' | 'silver' | 'gold'
 }>()
 </script>
 
 <template>
   <div
       :class="[
-      'rounded-xl p-8 transition-all',
+      'relative rounded-xl p-8 transition-all',
       highlight
         ? 'bg-[#d97b1a] text-white border-2 border-[#d97b1a] shadow-xl scale-[1.03]'
         : 'bg-white border',
       variant === 'free' && 'border-slate-200',
       variant === 'weekly' && 'border-orange-200',
-      variant === 'monthly' && 'border-orange-300'
+      variant === 'monthly' && 'border-orange-300',
+      variant === 'bronze' && 'border-orange-200',
+      variant === 'silver' && 'border-slate-300',
+      variant === 'gold' && 'border-amber-400'
     ]"
   >
     <!-- Badge -->

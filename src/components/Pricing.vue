@@ -1,13 +1,35 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import PricingCard from '@/components/PricingCard.vue'
 import { getMessage, t } from "@/i18n";
+
+const audience = ref<'customer' | 'business'>('customer');
 
 const freeFeatures = computed(() => getMessage<string[]>("pricing.plans.free.features", []));
 const freeDisabledFeatures = computed(() =>
   getMessage<string[]>("pricing.plans.free.disabledFeatures", [])
 );
 const proFeatures = computed(() => getMessage<string[]>("pricing.plans.proFeatures", []));
+
+const subtitle = computed(() =>
+  audience.value === 'customer' ? t("pricing.subtitle") : t("pricing.business.subtitle")
+);
+
+const bronzeFeatures = computed(() =>
+  getMessage<string[]>("pricing.business.plans.bronze.features", [])
+);
+const bronzeDisabledFeatures = computed(() =>
+  getMessage<string[]>("pricing.business.plans.bronze.disabledFeatures", [])
+);
+const silverFeatures = computed(() =>
+  getMessage<string[]>("pricing.business.plans.silver.features", [])
+);
+const silverDisabledFeatures = computed(() =>
+  getMessage<string[]>("pricing.business.plans.silver.disabledFeatures", [])
+);
+const goldFeatures = computed(() =>
+  getMessage<string[]>("pricing.business.plans.gold.features", [])
+);
 </script>
 
 <template>
@@ -21,12 +43,37 @@ const proFeatures = computed(() => getMessage<string[]>("pricing.plans.proFeatur
           {{ t("pricing.badge") }}
         </div>
         <h2 class="text-4xl font-bold mb-4">{{ t("pricing.title") }}</h2>
-        <p class="text-slate-600">
-          {{ t("pricing.subtitle") }}
+        <p class="text-slate-600 mb-8">
+          {{ subtitle }}
         </p>
+
+        <!-- Audience toggle -->
+        <div class="inline-flex bg-white border border-slate-200 rounded-full p-1 shadow-sm">
+          <button
+            type="button"
+            :class="[
+              'px-5 py-2 rounded-full text-sm font-semibold transition',
+              audience === 'customer' ? 'bg-[#d97b1a] text-white' : 'text-slate-500 hover:text-slate-700'
+            ]"
+            @click="audience = 'customer'"
+          >
+            {{ t("pricing.audience.customer") }}
+          </button>
+          <button
+            type="button"
+            :class="[
+              'px-5 py-2 rounded-full text-sm font-semibold transition',
+              audience === 'business' ? 'bg-[#d97b1a] text-white' : 'text-slate-500 hover:text-slate-700'
+            ]"
+            @click="audience = 'business'"
+          >
+            {{ t("pricing.audience.business") }}
+          </button>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- Customer plans -->
+      <div v-if="audience === 'customer'" class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <!-- Free -->
         <PricingCard
           :title="t('pricing.plans.free.title')"
@@ -72,6 +119,43 @@ const proFeatures = computed(() => getMessage<string[]>("pricing.plans.proFeatur
             {{ t("pricing.plans.proAnnual.saveText") }}
           </p>
         </PricingCard>
+      </div>
+
+      <!-- Business plans -->
+      <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Bronze -->
+        <PricingCard
+          :title="t('pricing.business.plans.bronze.title')"
+          :subtitle="t('pricing.business.plans.bronze.subtitle')"
+          price="NT$330"
+          :period="t('pricing.periods.mo')"
+          :features="bronzeFeatures"
+          :disabled-features="bronzeDisabledFeatures"
+          variant="bronze"
+        />
+
+        <!-- Silver (Most Popular) -->
+        <PricingCard
+          :title="t('pricing.business.plans.silver.title')"
+          :subtitle="t('pricing.business.plans.silver.subtitle')"
+          price="NT$690"
+          :period="t('pricing.periods.mo')"
+          :badge="t('pricing.business.plans.silver.badge')"
+          highlight
+          :features="silverFeatures"
+          :disabled-features="silverDisabledFeatures"
+          variant="silver"
+        />
+
+        <!-- Gold -->
+        <PricingCard
+          :title="t('pricing.business.plans.gold.title')"
+          :subtitle="t('pricing.business.plans.gold.subtitle')"
+          price="NT$990"
+          :period="t('pricing.periods.mo')"
+          :features="goldFeatures"
+          variant="gold"
+        />
       </div>
     </div>
   </section>

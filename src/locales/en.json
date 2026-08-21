@@ -64,10 +64,15 @@
     "badge": "Pricing",
     "title": "Pricing",
     "subtitle": "Choose the perfect plan for your needs",
+    "audience": {
+      "customer": "For Customers",
+      "business": "For Business Owners"
+    },
     "periods": {
       "week": "week",
       "month": "month",
-      "year": "year"
+      "year": "year",
+      "mo": "mo"
     },
     "plans": {
       "free": {
@@ -109,6 +114,58 @@
         "Unlimited Scans",
         "Priority Support 24/7"
       ]
+    },
+    "business": {
+      "subtitle": "Grow your business's visibility on Halal Formosa",
+      "plans": {
+        "bronze": {
+          "title": "Bronze",
+          "subtitle": "Get your business listed",
+          "features": [
+            "5 Photos",
+            "1 Active Promotion",
+            "Standard Analytics"
+          ],
+          "disabledFeatures": [
+            "Menu Showcase",
+            "Audience & Peak Times",
+            "Funnel & Benchmarking",
+            "Top Search Terms",
+            "Weekly Email + CSV Reports"
+          ]
+        },
+        "silver": {
+          "title": "Silver",
+          "subtitle": "Most popular for growing businesses",
+          "badge": "Most Popular",
+          "features": [
+            "10 Photos",
+            "Menu Showcase",
+            "3 Active Promotions",
+            "Standard Analytics",
+            "Audience & Peak Times"
+          ],
+          "disabledFeatures": [
+            "Funnel & Benchmarking",
+            "Top Search Terms",
+            "Weekly Email + CSV Reports"
+          ]
+        },
+        "gold": {
+          "title": "Gold",
+          "subtitle": "Full visibility & business insights",
+          "features": [
+            "Unlimited Photos",
+            "Menu Showcase",
+            "Unlimited Promotions",
+            "Standard Analytics",
+            "Audience & Peak Times",
+            "Funnel & Benchmarking",
+            "Top Search Terms",
+            "Weekly Email + CSV Reports"
+          ]
+        }
+      }
     }
   },
   "testimonials": {
