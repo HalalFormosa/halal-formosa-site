@@ -154,6 +154,13 @@ const supporters = [
     url: "https://www.facebook.com/sri.rahayu.cks/",
     active: true
   },
+  {
+    name: "Amanah Group",
+    logo: "/supporters/amanah-group.png",
+    scale: "scale-85",
+    url: "https://www.instagram.com/amanah.tw/",
+    active: true
+  },
 ]
 </script>
 
