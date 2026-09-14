@@ -411,8 +411,7 @@
           "Map usage collects approximate device location to display nearby halal-friendly locations.",
           "Ingredient scanning: photos you scan and the text extracted from them are processed using Google Cloud's OCR (text recognition) and Translation services to analyze and translate ingredient information.",
           "If you enable notifications, we use OneSignal to deliver push notifications to your device. This involves sharing a device push token with OneSignal.",
-          "Business claim verification: business owners claiming or registering a listing may upload business registration documents and storefront photos. These are stored privately and accessible only to the uploader and Halal Formosa administrators for verification purposes.",
-          "Donation-related information is stored only as transaction metadata; no payment card data is stored by Halal Formosa."
+          "Business claim verification: business owners claiming or registering a listing may upload business registration documents and storefront photos. These are stored privately and accessible only to the uploader and Halal Formosa administrators for verification purposes."
         ]
       },
       {
@@ -422,7 +421,6 @@
           "To provide location-based Explore and Map functionality",
           "To monitor system performance and improve the Service",
           "To detect, prevent, and address abuse, misuse, or security issues",
-          "To maintain transparency and records related to voluntary support contributions",
           "To store user preferences such as language and basic application settings"
         ]
       },
@@ -448,7 +446,7 @@
           "Personal data is retained while user accounts remain active.",
           "Account deletion requests are processed within 30 days.",
           "User-submitted reports are anonymized after 30 days and may be retained indefinitely.",
-          "Donation records may be anonymized and retained for accounting and transparency purposes."
+          "Historical donation records from the now-discontinued voluntary support feature may remain anonymized and retained for accounting and transparency purposes."
         ]
       },
       {
@@ -458,7 +456,6 @@
           "User authentication is provided through Google, Apple, and LINE services.",
           "We use Discord as an internal team notification tool for operational monitoring; account email and display name may be included in these internal notifications. This tool is used solely for internal operations and is not used for marketing.",
           "Push notifications are delivered through OneSignal, which receives your device's push token.",
-          "Voluntary support contributions are processed via bobaboba.me (AnyoneLab).",
           "Payments for Halal Formosa Pro subscriptions are processed by the respective app store platform, and Halal Formosa does not store or process payment card information."
         ]
       },
@@ -534,14 +531,8 @@
         "text": "Halal Formosa is a digital information platform operated by YiQi Global Consulting (藝啟文創行銷有限公司). The Service does not provide halal certification, religious rulings (fatwa), or official verification."
       },
       {
-        "title": "Article 3 - Voluntary Support",
-        "list": [
-          "The Service provides an optional voluntary support feature.",
-          "Support contributions are processed via <strong>bobaboba.me (AnyoneLab)</strong>.",
-          "Support is used to maintain server infrastructure, operational costs, and ongoing development.",
-          "Support contributions are non-refundable.",
-          "Providing support does not unlock features or grant ownership, rights, or privileges."
-        ]
+        "title": "Article 3 - Voluntary Support (Discontinued)",
+        "text": "The voluntary support feature previously offered within the Service has been discontinued and is no longer available. Historical support contributions were processed via bobaboba.me (AnyoneLab) and were non-refundable; providing support never unlocked features or granted ownership, rights, or privileges."
       },
       {
         "title": "Article 4 - Halal Formosa Pro Membership",
