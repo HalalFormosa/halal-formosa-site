@@ -137,25 +137,25 @@ const customFeatures = computed(() =>
           variant="bronze"
         />
 
-        <!-- Silver (Most Popular) -->
+        <!-- Silver -->
         <PricingCard
           :title="t('pricing.business.plans.silver.title')"
           :subtitle="t('pricing.business.plans.silver.subtitle')"
           price="NT$690"
           :period="t('pricing.periods.mo')"
-          :badge="t('pricing.business.plans.silver.badge')"
-          highlight
           :features="silverFeatures"
           :disabled-features="silverDisabledFeatures"
           variant="silver"
         />
 
-        <!-- Gold -->
+        <!-- Gold (Most Popular) -->
         <PricingCard
           :title="t('pricing.business.plans.gold.title')"
           :subtitle="t('pricing.business.plans.gold.subtitle')"
           price="NT$990"
           :period="t('pricing.periods.mo')"
+          :badge="t('pricing.business.plans.gold.badge')"
+          highlight
           :features="goldFeatures"
           variant="gold"
         />

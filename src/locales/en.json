@@ -136,8 +136,7 @@
         },
         "silver": {
           "title": "Silver",
-          "subtitle": "Most popular for growing businesses",
-          "badge": "Most Popular",
+          "subtitle": "Built for growing businesses",
           "features": [
             "10 Photos",
             "Menu Showcase",
@@ -154,6 +153,7 @@
         "gold": {
           "title": "Gold",
           "subtitle": "Full visibility & business insights",
+          "badge": "Most Popular",
           "features": [
             "Unlimited Photos",
             "Menu Showcase",
