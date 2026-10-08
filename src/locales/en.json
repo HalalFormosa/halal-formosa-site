@@ -81,8 +81,8 @@
         "features": [
           "Halal Map Access",
           "Basic Ingredient Scanning",
-          "10 Scans Daily",
-          "Collections (up to 10 items total)"
+          "5 Scans Daily",
+          "Collections (up to 5 items total)"
         ],
         "disabledFeatures": [
           "Unlimited Scans",
@@ -112,7 +112,7 @@
         "No Ads",
         "Unlimited Collection Items",
         "Unlimited Scans",
-        "Priority Support 24/7"
+        "Priority Support"
       ]
     },
     "business": {
