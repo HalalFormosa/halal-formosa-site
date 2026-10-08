@@ -10,6 +10,8 @@ const freeDisabledFeatures = computed(() =>
   getMessage<string[]>("pricing.plans.free.disabledFeatures", [])
 );
 const proFeatures = computed(() => getMessage<string[]>("pricing.plans.proFeatures", []));
+// Same order and length as proFeatures: entry i explains proFeatures[i] ("" = no hint).
+const proFeatureHints = computed(() => getMessage<string[]>("pricing.plans.proFeatureHints", []));
 
 const subtitle = computed(() =>
   audience.value === 'customer' ? t("pricing.subtitle") : t("pricing.business.subtitle")
@@ -94,6 +96,7 @@ const customFeatures = computed(() =>
           price="NT$39"
           :period="t('pricing.periods.week')"
           :features="proFeatures"
+          :hints="proFeatureHints"
           variant="weekly"
         />
 
@@ -104,6 +107,7 @@ const customFeatures = computed(() =>
           price="NT$99"
           :period="t('pricing.periods.month')"
           :features="proFeatures"
+          :hints="proFeatureHints"
           variant="monthly"
         />
 
@@ -116,6 +120,7 @@ const customFeatures = computed(() =>
           :badge="t('pricing.plans.proAnnual.badge')"
           highlight
           :features="proFeatures"
+          :hints="proFeatureHints"
           variant="annual"
         >
           <p class="text-sm text-orange-100 text-center mt-4">

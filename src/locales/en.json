@@ -116,6 +116,18 @@
         "Scan History",
         "Full Halalify Phrase List",
         "Priority Support"
+      ],
+      "proFeatureHints": [
+        "",
+        "Get a plain-language explanation, written by AI from the Halal Formosa database, of why an ingredient was flagged.",
+        "A personalised feed of halal and Muslim-friendly products, based on what you have looked at before, plus new items you have not seen yet.",
+        "",
+        "Save as many products and places as you like. Free accounts can save up to 5 of each.",
+        "Free accounts get 5 scans a day.",
+        "Learn exactly why an ingredient is Haram or Syubhah, with the sources and scholarly opinions behind each verdict.",
+        "A record of your past ingredient scans, so you can look them up again.",
+        "Halalify helps you ask in Mandarin whether food contains pork, alcohol or other ingredients you avoid. Free includes 5 phrases; Pro unlocks the full list.",
+        "Messages from Pro members are answered with priority."
       ]
     },
     "business": {
