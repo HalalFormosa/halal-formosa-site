@@ -135,7 +135,7 @@ const customFeatures = computed(() =>
         <PricingCard
           :title="t('pricing.business.plans.bronze.title')"
           :subtitle="t('pricing.business.plans.bronze.subtitle')"
-          price="NT$330"
+          price="NT$490"
           :period="t('pricing.periods.mo')"
           :features="bronzeFeatures"
           :disabled-features="bronzeDisabledFeatures"
@@ -146,7 +146,7 @@ const customFeatures = computed(() =>
         <PricingCard
           :title="t('pricing.business.plans.silver.title')"
           :subtitle="t('pricing.business.plans.silver.subtitle')"
-          price="NT$690"
+          price="NT$990"
           :period="t('pricing.periods.mo')"
           :features="silverFeatures"
           :disabled-features="silverDisabledFeatures"
@@ -157,7 +157,7 @@ const customFeatures = computed(() =>
         <PricingCard
           :title="t('pricing.business.plans.gold.title')"
           :subtitle="t('pricing.business.plans.gold.subtitle')"
-          price="NT$990"
+          price="NT$1,490"
           :period="t('pricing.periods.mo')"
           :badge="t('pricing.business.plans.gold.badge')"
           highlight
