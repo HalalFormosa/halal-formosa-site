@@ -6,6 +6,7 @@ import {
 } from "vue-router";
 
 import { getMessage, locale, t } from "@/i18n";
+import { getArticleSeo } from "@/lib/articleSeo";
 import Layout from "@/layouts/Layout.vue";
 import Home from "@/pages/Home.vue";
 import PrivacyPolicy from "@/pages/PrivacyPolicy.vue";
@@ -241,8 +242,14 @@ const applyDocumentMeta = (to: RouteLocationNormalizedLoaded) => {
       ? to.meta.descriptionKey
       : DEFAULT_DESCRIPTION_KEY;
 
-  const title = t(titleKey);
-  const description = t(descriptionKey);
+  // For known articles, use the real title right away. Without this the page
+  // shows the generic "Article" title until Supabase has answered, and a crawler
+  // that snapshots early would index that.
+  const articleSeo =
+    to.name === "NewsArticle" ? getArticleSeo(String(to.params.id ?? "")) : undefined;
+
+  const title = articleSeo?.title ?? t(titleKey);
+  const description = articleSeo?.description ?? t(descriptionKey);
   const canonicalUrl = buildPageUrl(to.path);
   const ogLocale = locale.value === "zh-tw" ? "zh_TW" : "en_US";
 

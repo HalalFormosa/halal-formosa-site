@@ -716,8 +716,8 @@
       "description": "Review Halal Formosa's Terms of Service governing the use of the halal map, ingredient scanner, and related services."
     },
     "news": {
-      "title": "News & Articles - Halal Formosa",
-      "description": "Read the latest news, updates, and articles from Halal Formosa about halal living in Taiwan."
+      "title": "Halal Food Guides for Taipei and Taiwan | Halal Formosa",
+      "description": "Practical halal food guides for Taipei and across Taiwan, plus news and community updates from Halal Formosa. Start with our most-read guides."
     },
     "newsArticle": {
       "title": "Article - Halal Formosa",
@@ -734,8 +734,10 @@
   },
   "newsPage": {
     "badge": "Latest Updates",
-    "title": "News & Articles",
-    "subtitle": "Stay informed with the latest news, announcements, and stories from the Halal Formosa community.",
+    "title": "Halal Food Guides and News for Taiwan",
+    "subtitle": "Where to eat halal in Taipei and across Taiwan, how to check what you are eating, and what is happening in the Muslim community here. New to Taiwan? Begin with the guides below.",
+    "featuredTitle": "Start here: our most-read guides",
+    "allArticles": "All articles",
     "readMore": "Read more",
     "backToArticles": "Back to all articles",
     "errorLoading": "Unable to load articles. Please try again later.",

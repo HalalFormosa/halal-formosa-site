@@ -716,8 +716,8 @@
       "description": "檢視 Halal Formosa 服務條款，了解清真地圖、成分掃描與相關服務使用規範。"
     },
     "news": {
-      "title": "最新消息 - Halal Formosa",
-      "description": "閱讀 Halal Formosa 最新消息、公告與文章，了解台灣清真生活動態。"
+      "title": "台北與全台清真美食指南 | Halal Formosa",
+      "description": "台北與全台灣的清真美食實用指南，以及 Halal Formosa 的最新消息與社群動態。從最多人閱讀的指南開始看。"
     },
     "newsArticle": {
       "title": "文章 - Halal Formosa",
@@ -734,8 +734,10 @@
   },
   "newsPage": {
     "badge": "最新動態",
-    "title": "最新消息與文章",
-    "subtitle": "掌握 Halal Formosa 社群的最新消息、公告與故事。",
+    "title": "台灣清真美食指南與最新消息",
+    "subtitle": "到哪裡吃清真、怎麼確認食物能不能吃，以及台灣穆斯林社群的最新動態。剛到台灣的話，可以先從下面的指南開始。",
+    "featuredTitle": "從這裡開始：最多人閱讀的指南",
+    "allArticles": "所有文章",
     "readMore": "閱讀更多",
     "backToArticles": "返回所有文章",
     "errorLoading": "無法載入文章，請稍後再試。",

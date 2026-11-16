@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/news/bit.ly/:path*", "destination": "https://bit.ly/:path*", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "https://svmlwnzmheiishkdwafk.supabase.co/functions/v1/sitemap" },
     { "source": "/(.*)", "destination": "/" }

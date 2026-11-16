@@ -18,6 +18,27 @@
         </p>
       </div>
 
+      <!-- Top guides: plain links that render without waiting for the database -->
+      <nav class="mb-16" :aria-label="t('newsPage.featuredTitle')">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+          {{ t("newsPage.featuredTitle") }}
+        </h2>
+        <ul class="grid md:grid-cols-2 gap-3">
+          <li v-for="item in TOP_ARTICLES" :key="item.slug">
+            <router-link
+              :to="`/news/${item.slug}`"
+              class="block rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-5 py-4 font-medium text-slate-800 dark:text-slate-100 hover:border-[#d97b1a]/40 hover:text-[#d97b1a] transition"
+            >
+              {{ item.title }}
+            </router-link>
+          </li>
+        </ul>
+      </nav>
+
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+        {{ t("newsPage.allArticles") }}
+      </h2>
+
       <!-- Loading State -->
       <div v-if="loading" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div v-for="n in 6" :key="n" class="animate-pulse">
@@ -116,6 +137,7 @@
 import { ref, onMounted } from "vue";
 import { supabase } from "@/lib/supabase";
 import { t, locale } from "@/i18n";
+import { TOP_ARTICLES } from "@/lib/articleSeo";
 
 type NewsArticle = {
   id: string;

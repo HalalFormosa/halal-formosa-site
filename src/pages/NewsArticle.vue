@@ -94,7 +94,7 @@
                prose-headings:text-slate-900 dark:prose-headings:text-slate-100
                prose-a:text-[#d97b1a] prose-a:no-underline hover:prose-a:underline
                prose-img:rounded-xl prose-img:shadow-md"
-        v-html="article.content"
+        v-html="safeContent"
       />
 
       <!-- Divider -->
@@ -136,17 +136,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed, watch } from "vue";
+import { ref, onMounted, onBeforeUnmount, computed, watch } from "vue";
 import { useRoute } from "vue-router";
 import { supabase } from "@/lib/supabase";
 import { t, locale } from "@/i18n";
+import { getArticleSeo, NOINDEX_SLUGS } from "@/lib/articleSeo";
+
+const SITE_URL = "https://halalformosa.com";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+const ROBOTS_INDEX = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1";
+const ARTICLE_LD_IDS = ["article-jsonld", "article-faq-jsonld", "article-breadcrumb-jsonld"];
 
 type NewsArticle = {
   id: string;
+  slug: string | null;
   title: string;
   header_image: string | null;
   content: string | null;
   created_at: string;
+  updated_at: string | null;
   author_name: string | null;
 };
 
@@ -160,13 +168,14 @@ const fetchArticle = async () => {
   try {
     loading.value = true;
     error.value = false;
+    article.value = null;
 
     const param = route.params.id as string;
     const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(param);
 
     const query = supabase
       .from("news")
-      .select("id, title, header_image, content, created_at, author_name");
+      .select("id, slug, title, header_image, content, created_at, updated_at, author_name");
 
     const { data, error: fetchError } = await (
       isUuid ? query.eq("id", param) : query.eq("slug", param)
@@ -177,6 +186,7 @@ const fetchArticle = async () => {
   } catch (e) {
     console.error("Failed to fetch article:", e);
     error.value = true;
+    applyNotFoundMeta();
   } finally {
     loading.value = false;
   }
@@ -210,92 +220,219 @@ const copyLink = async () => {
   }
 };
 
+// Some article bodies in the news table contain links that were pasted without
+// a scheme ("bit.ly/...", which the browser reads as a path under /news/) or
+// left as an unfilled template value ("cta_target_url"). Repair them when
+// rendering so crawlers and readers never follow a broken URL.
+const safeContent = computed(() => {
+  const html = article.value?.content;
+  if (!html) return "";
+  return html
+    .replace(/href="cta_target_url"/gi, `href="${SITE_URL}"`)
+    .replace(/href="((?:www\.)?(?:bit\.ly|tinyurl\.com)\/[^"]*)"/gi, 'href="https://$1"');
+});
+
+const setMeta = (attr: "name" | "property", key: string, content: string) => {
+  let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+};
+
+const removeMeta = (attr: "name" | "property", key: string) => {
+  document.querySelector(`meta[${attr}="${key}"]`)?.remove();
+};
+
+const setCanonical = (href: string) => {
+  let el = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+  if (!el) {
+    el = document.createElement("link");
+    el.setAttribute("rel", "canonical");
+    document.head.appendChild(el);
+  }
+  el.setAttribute("href", href);
+};
+
+const setJsonLd = (id: string, payload: object) => {
+  let script = document.getElementById(id) as HTMLScriptElement | null;
+  if (!script) {
+    script = document.createElement("script");
+    script.id = id;
+    script.type = "application/ld+json";
+    document.head.appendChild(script);
+  }
+  script.textContent = JSON.stringify(payload);
+};
+
+// Build FAQPage data from the "Frequently Asked Questions" section of the body:
+// an h2 followed by h3 questions, each answered by the paragraphs after it.
+const extractFaq = (html: string) => {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const heading = [...doc.querySelectorAll("h2")].find((h) =>
+    /frequently asked questions|^faqs?$/i.test(h.textContent?.trim() ?? "")
+  );
+  if (!heading) return [];
+
+  const items: { q: string; a: string }[] = [];
+  let current: { q: string; a: string[] } | null = null;
+  const flush = () => {
+    if (current && current.a.length) items.push({ q: current.q, a: current.a.join(" ") });
+    current = null;
+  };
+
+  for (let el = heading.nextElementSibling; el && el.tagName !== "H2"; el = el.nextElementSibling) {
+    if (el.tagName === "H3") {
+      flush();
+      current = { q: el.textContent?.trim() ?? "", a: [] };
+    } else if (current && (el.tagName === "P" || el.tagName === "UL" || el.tagName === "OL")) {
+      const text = el.textContent?.replace(/\s+/g, " ").trim();
+      if (text) current.a.push(text);
+    }
+  }
+  flush();
+  return items.filter((i) => i.q);
+};
+
+// Cut at a word boundary so snippets do not end mid-word.
+const trimTo = (text: string, max: number) => {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  return `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:.\s]+$/, "")}...`;
+};
+
+const applyNotFoundMeta = () => {
+  document.title = "Article not found - Halal Formosa";
+  setMeta("name", "robots", "noindex,follow");
+};
+
 // Inject SEO meta tags and JSON-LD structured data
 const injectSeoMeta = () => {
   const a = article.value;
   if (!a) return;
 
-  // Title
-  document.title = `${a.title} - Halal Formosa`;
+  const slug = a.slug || (route.params.id as string);
+  const override = a.slug ? getArticleSeo(a.slug) : undefined;
+  const url = `${SITE_URL}/news/${slug}`;
 
-  // Helper to set/create meta tags
-  const setMeta = (attr: string, key: string, content: string) => {
-    let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
-    if (!el) {
-      el = document.createElement("meta");
-      el.setAttribute(attr, key);
-      document.head.appendChild(el);
-    }
-    el.setAttribute("content", content);
-  };
+  const title = override?.title ?? `${a.title} - Halal Formosa`;
+  const plainText = (a.content ?? "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  const description = override?.description ?? trimTo(plainText, 155);
+  const image = a.header_image || DEFAULT_OG_IMAGE;
+  const modified = a.updated_at || a.created_at;
 
-  const plainText = a.content?.replace(/<[^>]*>/g, "").trim() ?? "";
-  const description = plainText.substring(0, 160);
-  const url = window.location.href;
-
-  // Standard meta
+  document.title = title;
+  setCanonical(url);
   setMeta("name", "description", description);
+  setMeta(
+    "name",
+    "robots",
+    a.slug && NOINDEX_SLUGS.has(a.slug) ? "noindex,follow" : ROBOTS_INDEX
+  );
 
   // Open Graph
-  setMeta("property", "og:title", a.title);
+  setMeta("property", "og:title", title);
   setMeta("property", "og:description", description);
   setMeta("property", "og:type", "article");
   setMeta("property", "og:url", url);
-  if (a.header_image) setMeta("property", "og:image", a.header_image);
+  setMeta("property", "og:image", image);
   setMeta("property", "og:site_name", "Halal Formosa");
 
   // Twitter Card
   setMeta("name", "twitter:card", "summary_large_image");
-  setMeta("name", "twitter:title", a.title);
+  setMeta("name", "twitter:title", title);
   setMeta("name", "twitter:description", description);
-  if (a.header_image) setMeta("name", "twitter:image", a.header_image);
+  setMeta("name", "twitter:url", url);
+  setMeta("name", "twitter:image", image);
 
   // Article-specific OG tags
   setMeta("property", "article:published_time", a.created_at);
+  setMeta("property", "article:modified_time", modified);
   if (a.author_name) setMeta("property", "article:author", a.author_name);
 
-  // JSON-LD Article structured data
-  const existingLd = document.getElementById("article-jsonld");
-  if (existingLd) existingLd.remove();
-
-  const jsonLd = {
+  // Article structured data
+  setJsonLd("article-jsonld", {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: a.title,
     description,
     url,
+    inLanguage: "en",
     datePublished: a.created_at,
-    dateModified: a.created_at,
-    image: a.header_image || undefined,
+    dateModified: modified,
+    image: [image],
     author: {
       "@type": a.author_name === "AutoSEO" ? "Organization" : "Person",
-      name: a.author_name || "Halal Formosa",
+      name: a.author_name === "AutoSEO" ? "Halal Formosa" : a.author_name || "Halal Formosa",
     },
     publisher: {
       "@type": "Organization",
       name: "Halal Formosa",
-      url: "https://halalformosa.com",
+      url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: "https://halalformosa.com/logo.png",
+        url: `${SITE_URL}/logo.png`,
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": url,
     },
-  };
+  });
 
-  const script = document.createElement("script");
-  script.id = "article-jsonld";
-  script.type = "application/ld+json";
-  script.textContent = JSON.stringify(jsonLd);
-  document.head.appendChild(script);
+  // Breadcrumbs: Home > News > Article
+  setJsonLd("article-breadcrumb-jsonld", {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "News", item: `${SITE_URL}/news` },
+      { "@type": "ListItem", position: 3, name: a.title, item: url },
+    ],
+  });
+
+  // FAQ structured data, only when the article really has a FAQ section
+  const faq = a.content ? extractFaq(a.content) : [];
+  if (faq.length) {
+    setJsonLd("article-faq-jsonld", {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    });
+  } else {
+    document.getElementById("article-faq-jsonld")?.remove();
+  }
+};
+
+// Leaving an article must not leave its image, dates or schema on the next page.
+const clearArticleMeta = () => {
+  ARTICLE_LD_IDS.forEach((id) => document.getElementById(id)?.remove());
+  removeMeta("property", "article:published_time");
+  removeMeta("property", "article:modified_time");
+  removeMeta("property", "article:author");
+  setMeta("property", "og:image", DEFAULT_OG_IMAGE);
+  setMeta("name", "twitter:image", DEFAULT_OG_IMAGE);
+  setMeta("name", "robots", ROBOTS_INDEX);
 };
 
 watch(() => article.value, injectSeoMeta);
 
+// The same component is reused when only the :id changes, so refetch then.
+watch(
+  () => route.params.id,
+  (next, prev) => {
+    if (next && next !== prev) fetchArticle();
+  }
+);
+
 onMounted(fetchArticle);
+onBeforeUnmount(clearArticleMeta);
 </script>
 
 <style scoped>
