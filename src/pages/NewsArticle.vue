@@ -137,7 +137,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, computed, watch } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { supabase } from "@/lib/supabase";
 import { t, locale } from "@/i18n";
 import { getArticleSeo, NOINDEX_SLUGS } from "@/lib/articleSeo";
@@ -159,6 +159,7 @@ type NewsArticle = {
 };
 
 const route = useRoute();
+const router = useRouter();
 const article = ref<NewsArticle | null>(null);
 const loading = ref(true);
 const error = ref(false);
@@ -182,6 +183,14 @@ const fetchArticle = async () => {
     ).single();
 
     if (fetchError) throw fetchError;
+
+    // An article opened by its UUID but that has a slug belongs at the slug URL.
+    // Move there so only one URL per article is shown and shared.
+    if (isUuid && data.slug) {
+      await router.replace({ path: `/news/${data.slug}`, query: route.query, hash: route.hash });
+      return;
+    }
+
     article.value = data;
   } catch (e) {
     console.error("Failed to fetch article:", e);
